@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YARNY | Handmade Luxury</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <h1 class="loader-logo">YARNY</h1>
+            <div class="loader-line-box"><div class="loader-line-fill"></div></div>
+            <div class="loader-counter" id="loaderCounter">0%</div>
+        </div>
+        <div class="curtain-l"></div>
+        <div class="curtain-r"></div>
+    </div>
+
+    <!-- AUTH MODAL -->
+    <div class="auth-overlay" id="authOverlay">
+        <div class="auth-box-center">
+            <button class="close-btn-corner" id="closeAuth"><i class="ph ph-x"></i></button>
+            <div class="auth-layout">
+                <div class="auth-visual">
+                    <img src="assets/lOGINN.jpg" alt="Login Visual">
+                    <div class="visual-text">
+                        <span class="visual-tag">Yarny</span>
+                        <h3>The Club</h3>
+                        <p>Members only.</p>
+                        <div class="visual-dots">
+                            <div class="visual-dot active"></div>
+                            <div class="visual-dot"></div>
+                            <div class="visual-dot"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="auth-content">
+                    <div id="loginSection" class="form-wrapper active">
+                        <div class="auth-header-space">
+                            <span class="auth-eyebrow">Member Access</span>
+                            <h2>Welcome Back</h2>
+                            <p class="subtitle">Sign in to your luxury account.</p>
+                        </div>
+                        <form id="loginForm">
+                            <div class="modern-input">
+                                <input type="email" id="logEmail" required placeholder=" ">
+                                <label for="logEmail">Email Address</label>
+                            </div>
+                            <div class="modern-input">
+                                <input type="password" id="logPass" required placeholder=" ">
+                                <label for="logPass">Password</label>
+                                <i class="ph ph-eye toggle-password" onclick="togglePassword('logPass', this)"></i>
+                            </div>
+                            <button type="submit" class="btn-prestige full-width"><span>Sign In</span> <i class="ph ph-arrow-right"></i></button>
+                        </form>
+                        <div class="switch-link">New? <a onclick="showRegister()">Create Account</a></div>
+                    </div>
+                    <div id="registerSection" class="form-wrapper">
+                        <div class="auth-header-space">
+                            <span class="auth-eyebrow">New Member</span>
+                            <h2>Join Yarny</h2>
+                            <p class="subtitle">Begin your handmade journey.</p>
+                        </div>
+                        <form id="registerForm">
+                            <div class="modern-input"><input type="text" id="regName" required placeholder=" "><label>Full Name</label></div>
+                            <div class="modern-input"><input type="email" id="regEmail" required placeholder=" "><label>Email Address</label></div>
+                            <div class="modern-input">
+                                <input type="password" id="regPass" required placeholder=" ">
+                                <label for="regPass">Password</label>
+                                <i class="ph ph-eye toggle-password" onclick="togglePassword('regPass', this)"></i>
+                            </div>
+                            <button type="submit" class="btn-prestige full-width"><span>Register</span> <i class="ph ph-arrow-right"></i></button>
+                        </form>
+                        <div class="switch-link">Member? <a onclick="showLogin()">Sign In</a></div>
+                    </div>
+                    <div id="profileSection" class="form-wrapper">
+                        <div class="profile-view">
+                            <div class="profile-avatar-circle"><i class="ph-fill ph-user"></i></div>
+                            <h2 id="profileName">Hello</h2>
+                            <p class="subtitle">You are currently signed in.</p>
+                            <div class="profile-divider"></div>
+                            <div class="profile-actions">
+                                <button class="btn-prestige full-width" id="logoutBtn"><span>Sign Out</span> <i class="ph ph-sign-out"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#" class="logo-wrapper"><img src="assets/logo.png" alt="Yarny Logo" class="nav-logo-img"></a>
+        <ul class="nav-links">
+            <li><a href="#showcase" class="smooth-link">Collections</a></li>
+            <li><a href="#clothes" class="smooth-link">Clothes</a></li>
+            <li><a href="#bags" class="smooth-link">Bags</a></li>
+            <li><a href="#baby" class="smooth-link">Baby</a></li>
+            <li><a href="#special" class="smooth-link">Special Order</a></li>
+            <li><a href="#contact" class="smooth-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <!-- User button + dropdown -->
+            <div class="user-dropdown-wrap" id="userDropdownWrap">
+                <button class="icon-btn" id="userBtn"><i class="ph ph-user"></i><span class="status-dot" id="statusDot"></span></button>
+                <div class="user-dropdown" id="userDropdown">
+                    <div class="user-dropdown-header">
+                        <span class="user-dropdown-name" id="dropdownName">Guest</span>
+                        <span class="user-dropdown-sub">My Account</span>
+                    </div>
+                    <div class="user-dropdown-divider"></div>
+                    <a href="#" class="user-dropdown-item" id="ddProfile"><i class="ph ph-user-circle"></i> Profile</a>
+                    <a href="#" class="user-dropdown-item" id="ddOrders"><i class="ph ph-package"></i> My Orders</a>
+                    <div class="user-dropdown-divider"></div>
+                    <a href="#" class="user-dropdown-item user-dropdown-logout" id="ddLogout"><i class="ph ph-sign-out"></i> Sign Out</a>
+                </div>
+            </div>
+            <!-- Wishlist -->
+            <button class="icon-btn" id="openWishlist" title="Wishlist"><i class="ph ph-heart"></i><span class="cart-count" id="wishlistCount" style="display:none">0</span></button>
+            <!-- Cart -->
+            <button class="icon-btn" id="openCart"><i class="ph ph-handbag"></i><span class="cart-count" id="cartCount">0</span></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-master">
+        <div class="hero-bg">
+            <img src="assets/hero-bg.jpg" alt="Hero" class="hero-img-main">
+            <div class="dark-overlay-strong"></div>
+        </div>
+        <div class="hero-content-container">
+<div class="hero-text-block">
+                <span class="hero-subtitle">Wrap yourself in a</span>
+                <h1 class="hero-title-main">Yarny Warmth</h1>
+            </div>
+            <div class="hero-stats-row">
+                <div class="hero-stat">
+                    <span class="hero-stat-num" data-count="120" data-suffix="+">0+</span>
+                    <span class="hero-stat-label">Unique Designs</span>
+                </div>
+                <span class="hero-stat-divider"></span>
+                <div class="hero-stat">
+                    <span class="hero-stat-num" data-count="500" data-suffix="+">0+</span>
+                    <span class="hero-stat-label">Happy Clients</span>
+                </div>
+                <span class="hero-stat-divider"></span>
+                <div class="hero-stat">
+                    <span class="hero-stat-num" data-count="3">0</span>
+                    <span class="hero-stat-label">Collections</span>
+                </div>
+            </div>
+            <a href="#showcase" class="btn-hero-lumiere smooth-link">
+                <div class="btn-lumiere-inner">Discover Collection</div>
+                <div class="btn-lumiere-arrow"><i class="ph ph-arrow-right"></i></div>
+            </a>
+        </div>
+        <div class="scroll-icon">
+            <div class="mouse-shape"><div class="wheel-anim"></div></div>
+            <span class="scroll-label">Scroll</span>
+        </div>
+    </header>
+
+    <!-- MARQUEE -->
+    <div class="marquee-strip">
+        <div class="track">
+            <span>✦ HANDMADE LUXURY ✦ SUSTAINABLE COTTON ✦ MOROCCAN CRAFTSMANSHIP ✦ CUSTOM DESIGNS ✦ TANGER ATELIER ✦ BESPOKE PIECES</span>
+            <span>✦ HANDMADE LUXURY ✦ SUSTAINABLE COTTON ✦ MOROCCAN CRAFTSMANSHIP ✦ CUSTOM DESIGNS ✦ TANGER ATELIER ✦ BESPOKE PIECES</span>
+        </div>
+    </div>
+
+    <!-- COLLECTIONS SHOWCASE -->
+    <section id="showcase" class="showcase-compact">
+
+        <!-- ── EDITORIAL HEADER ─────────────────────── -->
+        <div class="coll-header">
+            <div class="coll-header-left">
+                <span class="coll-eyebrow">
+                    <span class="coll-eyebrow-line"></span>
+                    Explore
+                </span>
+                <h2 class="coll-title"><span class="coll-title-our">Our</span> Collections</h2>
+            </div>
+            <div class="coll-header-right">
+                <p class="coll-header-desc">Three handcrafted worlds — each piece a labour of love, born in our Tanger atelier from the finest Moroccan yarn.</p>
+                <div class="coll-header-meta">
+                    <span class="coll-meta-num">03</span>
+                    <span class="coll-meta-label">Collections</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── STAGGERED CARD GRID ──────────────────── -->
+        <div class="coll-grid">
+
+            <!-- Card 1 — Clothing -->
+            <a href="#clothes" class="compact-card smooth-link" data-index="01">
+                <div class="compact-img-box">
+                    <img src="assets/cat-clothes.jpg" alt="Clothing">
+                    <div class="coll-img-shine"></div>
+                    <span class="compact-item-count">4 Pieces</span>
+                </div>
+                <div class="coll-card-body">
+                    <span class="compact-category">Ready to Wear</span>
+                    <h3>Clothing</h3>
+                    <div class="coll-card-cta">
+                        <span class="coll-cta-line"></span>
+                        <span class="coll-cta-text">Discover</span>
+                        <i class="ph ph-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 2 — Bags (staggered down) -->
+            <a href="#bags" class="compact-card smooth-link coll-card-offset-2" data-index="02">
+                <div class="compact-img-box">
+                    <img src="assets/cat-bags.jpg" alt="Bags">
+                    <div class="coll-img-shine"></div>
+                    <span class="compact-item-count">4 Pieces</span>
+                </div>
+                <div class="coll-card-body">
+                    <span class="compact-category">Handmade</span>
+                    <h3>Handbags</h3>
+                    <div class="coll-card-cta">
+                        <span class="coll-cta-line"></span>
+                        <span class="coll-cta-text">Discover</span>
+                        <i class="ph ph-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 3 — Baby (staggered mid) -->
+            <a href="#baby" class="compact-card smooth-link coll-card-offset-3" data-index="03">
+                <div class="compact-img-box">
+                    <img src="assets/cat-baby.jpg" alt="Baby">
+                    <div class="coll-img-shine"></div>
+                    <span class="compact-item-count">4 Pieces</span>
+                </div>
+                <div class="coll-card-body">
+                    <span class="compact-category">Little Ones</span>
+                    <h3>Baby</h3>
+                    <div class="coll-card-cta">
+                        <span class="coll-cta-line"></span>
+                        <span class="coll-cta-text">Discover</span>
+                        <i class="ph ph-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- ── STATS STRIP ───────────────────────────── -->
+        <div class="coll-stats-strip">
+            <div class="coll-stat-item">
+                <span class="coll-stat-num">120+</span>
+                <span class="coll-stat-label">Unique Designs</span>
+            </div>
+            <div class="coll-stat-sep"></div>
+            <div class="coll-stat-item">
+                <span class="coll-stat-num">500+</span>
+                <span class="coll-stat-label">Happy Clients</span>
+            </div>
+            <div class="coll-stat-sep"></div>
+            <div class="coll-stat-item">
+                <span class="coll-stat-num">100%</span>
+                <span class="coll-stat-label">Handmade in Morocco</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CLOTHES -->
+    <section id="clothes" class="section bg-light">
+        <div class="container">
+            <div class="section-head"><h2>Ready to Wear</h2></div>
+            <div class="grid-4-strict">
+                <div class="pro-card" data-name="Pink Cardigan" data-price="450" data-img="assets/cat-clothes.jpg" data-desc="Soft merino wool cardigan with delicate crochet details. Made by hand in Tanger.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="pink_cardigan" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Pink Cardigan" data-price="450" data-img="assets/cat-clothes.jpg" data-desc="Soft merino wool cardigan with delicate crochet details. Made by hand in Tanger." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
+                        <img src="assets/cat-clothes.jpg" alt="Pink Cardigan">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Pink Cardigan</span>
+                            <button class="btn-liquid-gold" onclick="addToCart('Pink Cardigan', '450 MAD', 'assets/cat-clothes.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">450 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Pink Cardigan</h4>
+                </div>
+                <div class="pro-card" data-name="White Vest" data-price="300" data-img="assets/cat-clothes2.jpg" data-desc="Classic knit vest in pure cotton. Lightweight and effortlessly elegant.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="white_vest" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="White Vest" data-price="300" data-img="assets/cat-clothes2.jpg" data-desc="Classic knit vest in pure cotton. Lightweight and effortlessly elegant." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
+                        <img src="assets/cat-clothes2.jpg" alt="White Vest">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">White Vest</span>
+                            <button class="btn-liquid-gold" onclick="addToCart('White Vest', '300 MAD', 'assets/cat-clothes2.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">300 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>White Vest</h4>
+                </div>
+                <div class="pro-card" data-name="Crop Top" data-price="200" data-img="assets/cat-clothes3.jpg" data-desc="Trendy crochet crop top with intricate flower patterns. A statement piece.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="crop_top" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Crop Top" data-price="200" data-img="assets/cat-clothes3.jpg" data-desc="Trendy crochet crop top with intricate flower patterns. A statement piece." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
+                        <img src="assets/cat-clothes3.jpg" alt="Crop Top">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Crop Top</span>
+                            <button class="btn-liquid-gold" onclick="addToCart('Crop Top', '200 MAD', 'assets/cat-clothes3.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">200 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Crop Top</h4>
+                </div>
+                <div class="pro-card" data-name="Wool Scarf" data-price="150" data-img="assets/cat-clothes4.jpg" data-desc="Luxuriously soft wool scarf in warm natural tones. Wrap yourself in warmth.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="wool_scarf" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Wool Scarf" data-price="150" data-img="assets/cat-clothes4.jpg" data-desc="Luxuriously soft wool scarf in warm natural tones. Wrap yourself in warmth." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
+                        <img src="assets/cat-clothes4.jpg" alt="Wool Scarf">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Wool Scarf</span>
+                            <button class="btn-liquid-gold" onclick="addToCart('Wool Scarf', '150 MAD', 'assets/cat-clothes4.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">150 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Wool Scarf</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAGS -->
+    <section id="bags" class="section">
+        <div class="container">
+            <div class="section-head"><h2>Handmade Bags</h2></div>
+            <div class="grid-4-strict">
+                <div class="pro-card" data-name="Flower Tote" data-price="250" data-img="assets/cat-bags.jpg" data-desc="Handwoven tote adorned with blooming crochet flowers. Unique and practical.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="flower_tote" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Flower Tote" data-price="250" data-img="assets/cat-bags.jpg" data-desc="Handwoven tote adorned with blooming crochet flowers. Unique and practical." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
+                        <img src="assets/cat-bags.jpg" alt="Flower Tote">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Flower Tote</span>
+                            <button class="btn-liquid-gold" onclick="addToCart('Flower Tote', '250 MAD', 'assets/cat-bags.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">250 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Flower Tote</h4>
+                </div>
+                <div class="pro-card" data-name="Mini Purse" data-price="180" data-img="assets/cat-bags2.jpg" data-desc="Compact crocheted purse with delicate gold clasp. Perfect for evenings.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="mini_purse" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Mini Purse" data-price="180" data-img="assets/cat-bags2.jpg" data-desc="Compact crocheted purse with delicate gold clasp. Perfect for evenings." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
+                        <img src="assets/cat-bags2.jpg" alt="Mini Purse">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Mini Purse</span>
+                            <button class="btn-liquid-gold" onclick="addToCart('Mini Purse', '180 MAD', 'assets/cat-bags2.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">180 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Mini Purse</h4>
+                </div>
+                <div class="pro-card" data-name="Shoulder Bag" data-price="300" data-img="assets/cat-bag3.jpg" data-desc="Elegant shoulder bag crafted in fine Moroccan yarn. Timeless and refined.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="shoulder_bag" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Shoulder Bag" data-price="300" data-img="assets/cat-bag3.jpg" data-desc="Elegant shoulder bag crafted in fine Moroccan yarn. Timeless and refined." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
+                        <img src="assets/cat-bag3.jpg" alt="Shoulder Bag">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Shoulder Bag</span>
+                            <button class="btn-liquid-gold" onclick="addToCart('Shoulder Bag', '300 MAD', 'assets/cat-bag3.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">300 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Shoulder Bag</h4>
+                </div>
+                <div class="pro-card" data-name="Beach Bag" data-price="350" data-img="assets/cat-bag4.jpg" data-desc="Spacious open-weave beach bag, handmade with love and Moroccan sunshine.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="beach_bag" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Beach Bag" data-price="350" data-img="assets/cat-bag4.jpg" data-desc="Spacious open-weave beach bag, handmade with love and Moroccan sunshine." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
+                        <img src="assets/cat-bag4.jpg" alt="Beach Bag">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Beach Bag</span>
+                            <button class="btn-liquid-gold" onclick="addToCart('Beach Bag', '350 MAD', 'assets/cat-bag4.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">350 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Beach Bag</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BABY -->
+    <section id="baby" class="section bg-light">
+        <div class="container">
+            <div class="section-head"><h2>Little Ones</h2></div>
+            <div class="grid-4-strict">
+                <div class="pro-card" data-name="Baby Blanket" data-price="350" data-img="assets/cat-baby.jpg" data-desc="Incredibly soft merino baby blanket. Safe for newborns. A treasured gift.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="baby_blanket" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Baby Blanket" data-price="350" data-img="assets/cat-baby.jpg" data-desc="Incredibly soft merino baby blanket. Safe for newborns. A treasured gift." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
+                        <img src="assets/cat-baby.jpg" alt="Baby Blanket">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Soft & Pure</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Baby Blanket</span>
+                            <button class="btn-liquid-gold" onclick="addToCart('Baby Blanket', '350 MAD', 'assets/cat-baby.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">350 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Baby Blanket</h4>
+                </div>
+                <div class="pro-card" data-name="Cute Beanie" data-price="120" data-img="assets/cat-baby2.jpg" data-desc="Adorable knit beanie for little heads. Warm, cozy and full of charm.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="cute_beanie" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Cute Beanie" data-price="120" data-img="assets/cat-baby2.jpg" data-desc="Adorable knit beanie for little heads. Warm, cozy and full of charm." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
+                        <img src="assets/cat-baby2.jpg" alt="Cute Beanie">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Little Ones</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Cute Beanie</span>
+                            <button class="btn-liquid-gold" onclick="addToCart('Cute Beanie', '120 MAD', 'assets/cat-baby2.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">120 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Cute Beanie</h4>
+                </div>
+                <div class="pro-card" data-name="Baby Booties" data-price="100" data-img="assets/cat-baby3.jpg" data-desc="Tiny handmade booties that keep little feet cozy. Made with purest love.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="baby_booties" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Baby Booties" data-price="100" data-img="assets/cat-baby3.jpg" data-desc="Tiny handmade booties that keep little feet cozy. Made with purest love." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
+                        <img src="assets/cat-baby3.jpg" alt="Baby Booties">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Little Ones</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Baby Booties</span>
+                            <button class="btn-liquid-gold" onclick="addToCart('Baby Booties', '100 MAD', 'assets/cat-baby3.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">100 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Baby Booties</h4>
+                </div>
+                <div class="pro-card" data-name="Amigurumi Toy" data-price="200" data-img="assets/cat-baby4.jpg" data-desc="Handcrafted crochet stuffed toy. Completely child-safe and one-of-a-kind.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="amigurumi_toy" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Amigurumi Toy" data-price="200" data-img="assets/cat-baby4.jpg" data-desc="Handcrafted crochet stuffed toy. Completely child-safe and one-of-a-kind." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
+                        <img src="assets/cat-baby4.jpg" alt="Amigurumi Toy">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Amigurumi Toy</span>
+                            <button class="btn-liquid-gold" onclick="addToCart('Amigurumi Toy', '200 MAD', 'assets/cat-baby4.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">200 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Amigurumi Toy</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIAL ORDER -->
+    <section id="special" class="bg-dark-vip">
+
+        <div class="vip-ghost-text" aria-hidden="true">Bespoke</div>
+
+        <div class="split-vip-3col">
+
+            <!-- ══ COL 1: CINEMATIC IMAGE PANEL ══ -->
+            <div class="vip-img-panel">
+                <img src="assets/special.jpeg" alt="Atelier" class="vip-panel-img">
+                <div class="vip-img-overlay"></div>
+
+                <!-- Floating badge top -->
+                <div class="vip-img-badge">
+                    <span class="vip-badge-dot"></span>
+                    <span>Bespoke Atelier</span>
+                    <span class="vip-badge-dot"></span>
+                </div>
+
+                <!-- Bottom overlay content -->
+                <div class="vip-img-content">
+                    <div class="vip-img-quote">✦</div>
+                    <h2 class="vip-panel-title">The<br><em>Special</em><br>Order</h2>
+                    <p class="vip-panel-sub">Every piece, a one-of-a-kind creation born in our Tanger atelier.</p>
+                </div>
+
+                <!-- Vertical text decoration -->
+                <div class="vip-img-vert-text" aria-hidden="true">YARNY · ATELIER · TANGER</div>
+            </div>
+
+            <!-- ══ COL 2: STORY + STEPS ══ -->
+            <div class="vip-text-area">
+
+                <div class="vip-header">
+                    <div class="vip-badge-row">
+                        <span class="vip-badge-dot"></span>
+                        <span class="vip-badge-label">How It Works</span>
+                        <span class="vip-badge-dot"></span>
+                    </div>
+                    <p>Collaborate one-on-one with our master artisans. Every stitch, color, and detail — crafted exclusively for you.</p>
+                </div>
+
+                <div class="vip-quote-divider">
+                    <span class="vip-qdiv-line"></span>
+                    <span class="vip-qdiv-diamond">✦</span>
+                    <span class="vip-qdiv-line"></span>
+                </div>
+
+                <div class="vip-process">
+                    <div class="vip-step">
+                        <div class="vip-step-icon"><i class="ph ph-pencil-line"></i></div>
+                        <div class="vip-step-body">
+                            <div class="vip-step-header">
+                                <span class="vip-step-num">01</span>
+                                <h5>Share Your Vision</h5>
+                            </div>
+                            <p>Describe your dream piece — style, colors, dimensions, any special details.</p>
+                        </div>
+                    </div>
+                    <div class="vip-step-connector"></div>
+                    <div class="vip-step">
+                        <div class="vip-step-icon"><i class="ph ph-users"></i></div>
+                        <div class="vip-step-body">
+                            <div class="vip-step-header">
+                                <span class="vip-step-num">02</span>
+                                <h5>Artisan Consultation</h5>
+                            </div>
+                            <p>Our team contacts you within 24 hours to align on materials and timeline.</p>
+                        </div>
+                    </div>
+                    <div class="vip-step-connector"></div>
+                    <div class="vip-step">
+                        <div class="vip-step-icon"><i class="ph ph-gift"></i></div>
+                        <div class="vip-step-body">
+                            <div class="vip-step-header">
+                                <span class="vip-step-num">03</span>
+                                <h5>Delivered to You</h5>
+                            </div>
+                            <p>Handmade with premium Moroccan yarn and delivered with love to your door.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vip-trust-row">
+                    <div class="vip-trust-item"><i class="ph ph-shield-check"></i><span>100% Handmade</span></div>
+                    <div class="vip-trust-item"><i class="ph ph-clock"></i><span>24h Reply</span></div>
+                    <div class="vip-trust-item"><i class="ph ph-star"></i><span>Exclusive Piece</span></div>
+                </div>
+
+            </div>
+
+            <!-- ══ COL 3: FORM ══ -->
+            <div class="vip-form-container">
+                <div class="vip-corner-tl"></div>
+                <div class="vip-corner-br"></div>
+
+                <div id="vipFormWrapper">
+                    <div class="vip-form-head">
+                        <div class="vip-form-head-tag">
+                            <span class="vip-form-head-tag-dot"></span>
+                            Start Your Order
+                        </div>
+                        <h3>Tell Us Your<br><em>Vision</em></h3>
+                        <p>Every detail helps our artisans craft something truly yours.</p>
+                    </div>
+
+                    <form class="vip-form vip-form-grid" id="specialOrderForm">
+
+                        <div class="vip-input-group">
+                            <div class="vip-input-icon"><i class="ph ph-user"></i></div>
+                            <input type="text" required placeholder=" ">
+                            <label>Full Name</label>
+                            <div class="gold-line"></div>
+                        </div>
+
+                        <div class="vip-input-group">
+                            <div class="vip-input-icon"><i class="ph ph-envelope"></i></div>
+                            <input type="email" required placeholder=" ">
+                            <label>Email Address</label>
+                            <div class="gold-line"></div>
+                        </div>
+
+                        <div class="vip-input-group vip-input-full">
+                            <div class="vip-input-icon"><i class="ph ph-tag"></i></div>
+                            <select required class="vip-select">
+                                <option value="" disabled selected></option>
+                                <option>Custom Garment</option>
+                                <option>Personalized Bag</option>
+                                <option>Baby Set</option>
+                                <option>Home Décor</option>
+                                <option>Other</option>
+                            </select>
+                            <label class="vip-label-static">Type of Creation</label>
+                            <div class="gold-line"></div>
+                        </div>
+
+                        <!-- COLOR SWATCHES — professional visual picker -->
+                        <div class="vip-input-full vip-color-section">
+                            <div class="vip-color-label">
+                                <i class="ph ph-palette"></i>
+                                Color Preferences
+                                <span class="vip-color-selected" id="vipColorSelected">Select colors</span>
+                            </div>
+                            <div class="vip-swatches" id="vipSwatches">
+                                <button type="button" class="vip-swatch" data-color="Rose Poudré"     style="background:#F2A8BE;" title="Rose Poudré"></button>
+                                <button type="button" class="vip-swatch" data-color="Blush"           style="background:#F7C5D5;" title="Blush"></button>
+                                <button type="button" class="vip-swatch" data-color="Cerise"          style="background:#D46A85;" title="Cerise"></button>
+                                <button type="button" class="vip-swatch" data-color="Bordeaux"        style="background:#7B2340;" title="Bordeaux"></button>
+                                <button type="button" class="vip-swatch" data-color="Ivoire"          style="background:#F5F0E8;" title="Ivoire"></button>
+                                <button type="button" class="vip-swatch" data-color="Crème"           style="background:#EDE0C4;" title="Crème"></button>
+                                <button type="button" class="vip-swatch" data-color="Or"              style="background:#C5A059;" title="Or"></button>
+                                <button type="button" class="vip-swatch" data-color="Caramel"         style="background:#C08040;" title="Caramel"></button>
+                                <button type="button" class="vip-swatch" data-color="Terracotta"      style="background:#C1603A;" title="Terracotta"></button>
+                                <button type="button" class="vip-swatch" data-color="Sable"           style="background:#B5956A;" title="Sable"></button>
+                                <button type="button" class="vip-swatch" data-color="Vert Sauge"      style="background:#8BA888;" title="Vert Sauge"></button>
+                                <button type="button" class="vip-swatch" data-color="Bleu Nuit"       style="background:#2D3A5E;" title="Bleu Nuit"></button>
+                                <button type="button" class="vip-swatch" data-color="Gris Perle"      style="background:#B8B8C0;" title="Gris Perle"></button>
+                                <button type="button" class="vip-swatch" data-color="Anthracite"      style="background:#3A3A3A;" title="Anthracite"></button>
+                                <button type="button" class="vip-swatch" data-color="Blanc"           style="background:#F8F8F8; border:1px solid rgba(255,255,255,0.15);" title="Blanc"></button>
+                                <button type="button" class="vip-swatch" data-color="Noir"            style="background:#111111;" title="Noir"></button>
+                            </div>
+                            <input type="hidden" name="colorChoice" id="vipColorInput">
+                        </div>
+
+                        <div class="vip-input-group vip-input-full vip-textarea-group">
+                            <textarea rows="3" required placeholder=" "></textarea>
+                            <label>Describe your vision in detail...</label>
+                            <div class="gold-line"></div>
+                        </div>
+
+                        <div class="vip-form-footer">
+                            <button type="submit" class="btn-gold-vip" id="vipSubmitBtn">
+                                <span>Send to Atelier</span>
+                                <i class="ph ph-paper-plane-tilt"></i>
+                            </button>
+                            <p class="vip-privacy-note">
+                                <i class="ph ph-lock-simple"></i>
+                                Your information is private and secure
+                            </p>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="vip-success-msg" id="vipSuccessMsg">
+                    <div class="vip-success-icon"><i class="ph-fill ph-seal-check"></i></div>
+                    <h3>Request Received</h3>
+                    <p>Our artisans will review your vision shortly.</p>
+                    <div class="vip-success-tag">Welcome to the Atelier</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section bg-light">
+        <div class="container">
+            <div class="section-head"><h2>The Members</h2></div>
+
+            <div class="artisan-grid">
+
+                <!-- Card 1 -->
+                <div class="artisan-card" data-index="01">
+                    <div class="artisan-img-wrap">
+                        <img src="assets/OUMNIAAA.png" alt="Oumnia" class="artisan-photo">
+                        <div class="artisan-img-grain"></div>
+                        <!-- Hover reveal layer -->
+                        <div class="artisan-reveal">
+                            <div class="artisan-reveal-inner">
+                                <span class="artisan-reveal-num">01</span>
+                                <div class="artisan-reveal-socials">
+                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-instagram-logo"></i></a>
+                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-linkedin-logo"></i></a>
+                                </div>
+                                <p class="artisan-reveal-quote">Passion for every stitch</p>
+                            </div>
+                        </div>
+                        <!-- Gold corner accent -->
+                        <div class="artisan-corner-tl"></div>
+                        <div class="artisan-corner-br"></div>
+                    </div>
+                    <div class="artisan-info">
+                        <div class="artisan-info-left">
+                            <span class="artisan-role">Ciel Stagiaire</span>
+                            <h4 class="artisan-name">Oumnia</h4>
+                        </div>
+                        <div class="artisan-info-right">
+                            <div class="artisan-dot-ring">
+                                <i class="ph ph-arrow-up-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Animated bottom line -->
+                    <div class="artisan-line"></div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="artisan-card" data-index="02">
+                    <div class="artisan-img-wrap">
+                        <img src="assets/Salmaaa.png" alt="Salma" class="artisan-photo">
+                        <div class="artisan-img-grain"></div>
+                        <div class="artisan-reveal">
+                            <div class="artisan-reveal-inner">
+                                <span class="artisan-reveal-num">02</span>
+                                <div class="artisan-reveal-socials">
+                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-instagram-logo"></i></a>
+                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-linkedin-logo"></i></a>
+                                </div>
+                                <p class="artisan-reveal-quote">Knitting dreams into reality</p>
+                            </div>
+                        </div>
+                        <div class="artisan-corner-tl"></div>
+                        <div class="artisan-corner-br"></div>
+                    </div>
+                    <div class="artisan-info">
+                        <div class="artisan-info-left">
+                            <span class="artisan-role">Ciel Stagiaire</span>
+                            <h4 class="artisan-name">Salma</h4>
+                        </div>
+                        <div class="artisan-info-right">
+                            <div class="artisan-dot-ring">
+                                <i class="ph ph-arrow-up-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artisan-line"></div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="artisan-card" data-index="03">
+                    <div class="artisan-img-wrap">
+                        <img src="assets/HAJARR.png" alt="Hajar" class="artisan-photo">
+                        <div class="artisan-img-grain"></div>
+                        <div class="artisan-reveal">
+                            <div class="artisan-reveal-inner">
+                                <span class="artisan-reveal-num">03</span>
+                                <div class="artisan-reveal-socials">
+                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-instagram-logo"></i></a>
+                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-linkedin-logo"></i></a>
+                                </div>
+                                <p class="artisan-reveal-quote">Loves design</p>
+                            </div>
+                        </div>
+                        <div class="artisan-corner-tl"></div>
+                        <div class="artisan-corner-br"></div>
+                    </div>
+                    <div class="artisan-info">
+                        <div class="artisan-info-left">
+                            <span class="artisan-role">Ciel Stagiaire</span>
+                            <h4 class="artisan-name">Hajar</h4>
+                        </div>
+                        <div class="artisan-info-right">
+                            <div class="artisan-dot-ring">
+                                <i class="ph ph-arrow-up-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artisan-line"></div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="artisan-card" data-index="04">
+                    <div class="artisan-img-wrap">
+                        <img src="assets/NOUHAILAA.png" alt="Nouhaila" class="artisan-photo">
+                        <div class="artisan-img-grain"></div>
+                        <div class="artisan-reveal">
+                            <div class="artisan-reveal-inner">
+                                <span class="artisan-reveal-num">04</span>
+                                <div class="artisan-reveal-socials">
+                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-instagram-logo"></i></a>
+                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-linkedin-logo"></i></a>
+                                </div>
+                                <p class="artisan-reveal-quote">Perfection in every detail</p>
+                            </div>
+                        </div>
+                        <div class="artisan-corner-tl"></div>
+                        <div class="artisan-corner-br"></div>
+                    </div>
+                    <div class="artisan-info">
+                        <div class="artisan-info-left">
+                            <span class="artisan-role">Ciel Stagiaire</span>
+                            <h4 class="artisan-name">Nouhaila</h4>
+                        </div>
+                        <div class="artisan-info-right">
+                            <div class="artisan-dot-ring">
+                                <i class="ph ph-arrow-up-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artisan-line"></div>
+                </div>
+
+            </div>
+            <div class="dev-signature-area">
+                <div class="dev-signature-inner">
+                    <div class="dev-signature-left">
+                        <div class="dev-avatar"><i class="ph-fill ph-code"></i></div>
+                        <div class="dev-text-group">
+                            <span class="dev-label">Digital Architecture</span>
+                            <h3 class="dev-name-script">Ayman Lekhal</h3>
+                            <span class="dev-alias">Web Developer</span>
+                        </div>
+                    </div>
+                    <div class="dev-signature-right">
+                        <div class="dev-right-text">
+                            <span class="dev-right-heading">Built by</span>
+                            <div class="dev-right-desc">Crafted with<br>Code &amp; Passion</div>
+                            <p class="dev-right-sub">Every pixel, every animation, every interaction — designed and developed to bring Yarny's luxury vision to life on the web.</p>
+                        </div>
+                        <div class="dev-tech-stack">
+                            <span class="dev-tech-badge">HTML &amp; CSS</span>
+                            <span class="dev-tech-badge">Vanilla JS</span>
+                            <span class="dev-tech-badge">GSAP</span>
+                            <span class="dev-tech-badge">Lenis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="section">
+        <div class="reviews-head">
+            <div class="reviews-head-left">
+                <span class="reviews-eyebrow">Testimonials</span>
+                <h2>What Our Clients Say</h2>
+                <div class="reviews-stars-avg">
+                    <i class="ph-fill ph-star star-icon"></i>
+                    <i class="ph-fill ph-star star-icon"></i>
+                    <i class="ph-fill ph-star star-icon"></i>
+                    <i class="ph-fill ph-star star-icon"></i>
+                    <i class="ph-fill ph-star star-icon"></i>
+                    <span class="reviews-avg-num">5.0</span>
+                    <span class="reviews-avg-count">· 120+ reviews</span>
+                </div>
+            </div>
+            <div class="reviews-head-right">
+                Verified customers<br>Real experiences
+            </div>
+        </div>
+
+        <div class="reviews-track-wrapper">
+            <div class="reviews-track">
+                <!-- Set 1 -->
+                <div class="review-card">
+                    <span class="review-quote-icon">"</span>
+                    <p class="review-text">Tbarkellah A7ssan website dyal yarn products li chft f 7yatiii!!!</p>
+                    <div class="review-footer">
+                        <div class="review-author">
+                            <div class="review-avatar">S</div>
+                            <div class="review-author-info">
+                                <h5>So3diya</h5>
+                                <span>Casablanca, MA</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <span class="review-quote-icon">"</span>
+                    <p class="review-text">Miaaaaaaw ahsn yarn product !!!!</p>
+                    <div class="review-footer">
+                        <div class="review-author">
+                            <div class="review-avatar">C</div>
+                            <div class="review-author-info">
+                                <h5>Cosmos</h5>
+                                <span>Tanger, MA</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <span class="review-quote-icon">"</span>
+                    <p class="review-text">Tbarklah , wsltni la commande durant 24 h , w tesdemt m quality dyal product it was incredible !!!</p>
+                    <div class="review-footer">
+                        <div class="review-author">
+                            <div class="review-avatar">S</div>
+                            <div class="review-author-info">
+                                <h5>Sa7a w ya sa7a</h5>
+                                <span>Ya 3dowt molaha, MA</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <span class="review-quote-icon">"</span>
+                    <p class="review-text">Quality kathdar 3la rassa</p>
+                    <div class="review-footer">
+                        <div class="review-author">
+                            <div class="review-avatar">M</div>
+                            <div class="review-author-info">
+                                <h5>Mes3oda</h5>
+                                <span>Tanger, MA</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <span class="review-quote-icon">"</span>
+                    <p class="review-text">Papapapa , design wa3er,(hada li 3ml deesign ystahl chi 7ajja w chi BMW M4 competition)</p>
+                    <div class="review-footer">
+                        <div class="review-author">
+                            <div class="review-avatar">A</div>
+                            <div class="review-author-info">
+                                <h5>Ayman Lekhal</h5>
+                                <span>Tanger Souani, MA</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Set 2 (duplicate for seamless loop) -->
+                <div class="review-card">
+                    <span class="review-quote-icon">"</span>
+                    <p class="review-text">Awl haja andk tnsawha hiya Analyse swot w pestel  ra hado kayl3bo dawr kbiiiir f naja7 dyal projet dyalkom mab9atchi ghir f products </p>
+                    <div class="review-footer">
+                        <div class="review-author">
+                            <div class="review-avatar">T</div>
+                            <div class="review-author-info">
+                                <h5>Tarik Elouahabi</h5>
+                                <span>Placa Toro Tanger , MA</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <span class="review-quote-icon">"</span>
+                    <p class="review-text">Tbarklah 3la nass d Ciel hayda bravo lilkom kbrto bina</p>
+                    <div class="review-footer">
+                        <div class="review-author">
+                            <div class="review-avatar">CH</div>
+                            <div class="review-author-info">
+                                <h5>Chaimae Ciel</h5>
+                                <span>Tanger Site 1 Ciel, MA</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <span class="review-quote-icon">"</span>
+                    <p class="review-text"> Meilleure service de tous les temps!</p>
+                    <div class="review-footer">
+                        <div class="review-author">
+                            <div class="review-avatar">M</div>
+                            <div class="review-author-info">
+                                <h5>Kylian Mbappe</h5>
+                                <span>Madrid, ESP</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <span class="review-quote-icon">"</span>
+                    <p class="review-text">3andna l7essa li maja nsha allah f chhar 4 , kono filmaw3id!!1.</p>
+                    <div class="review-footer">
+                        <div class="review-author">
+                            <div class="review-avatar">M</div>
+                            <div class="review-author-info">
+                                <h5>Mo7amed 7i7i</h5>
+                                <span> Placa toro Site 1 Ciel, MA</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <span class="review-quote-icon">"</span>
+                    <p class="review-text">Miaaaaaaaaaaaw !!!</p>
+                    <div class="review-footer">
+                        <div class="review-author">
+                            <div class="review-avatar">C</div>
+                            <div class="review-author-info">
+                                <h5>Cosmos</h5>
+                                <span>Planete zomoroda, WRLD</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="contact-inner">
+            <div class="contact-left">
+                <span class="contact-eyebrow">Get in Touch</span>
+                <h2>Let's Create<br>Something<br>Beautiful</h2>
+                <p>Whether you have a custom vision, a question about an order, or simply want to say hello — our artisans are here for you.</p>
+                <div class="contact-info-items">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="ph ph-map-pin"></i></div>
+                        <div class="contact-info-text">
+                            <h5>Atelier</h5>
+                            <span>Tanger, Morocco</span>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="ph ph-whatsapp-logo"></i></div>
+                        <div class="contact-info-text">
+                            <h5>WhatsApp</h5>
+                            <span>+212 6XX XXX XXX</span>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="ph ph-instagram-logo"></i></div>
+                        <div class="contact-info-text">
+                            <h5>Instagram</h5>
+                            <span>@yarny.official</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-right">
+                <div id="contactFormWrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="contact-form-row">
+                            <div class="contact-field">
+                                <input type="text" required placeholder=" ">
+                                <label>Full Name</label>
+                            </div>
+                            <div class="contact-field">
+                                <input type="email" required placeholder=" ">
+                                <label>Email Address</label>
+                            </div>
+                        </div>
+                        <div class="contact-field">
+                            <input type="text" placeholder=" ">
+                            <label>Subject</label>
+                        </div>
+                        <div class="contact-field">
+                            <textarea rows="4" required placeholder=" "></textarea>
+                            <label>Your Message</label>
+                        </div>
+                        <button type="submit" class="btn-contact-send">
+                            <span>Send Message</span>
+                            <i class="ph ph-paper-plane-tilt"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-success" id="contactSuccess">
+                    <span class="contact-success-icon"><i class="ph-fill ph-seal-check"></i></span>
+                    <h4>Message Received</h4>
+                    <p>We'll be in touch within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-master">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/logo.png" alt="Yarny" class="f-logo">
+                <p>Handmade Luxury from<br>Tanger, Morocco.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <a href="#clothes" class="smooth-link">Clothes</a>
+                <a href="#bags" class="smooth-link">Bags</a>
+                <a href="#baby" class="smooth-link">Baby</a>
+                <a href="#special" class="smooth-link">Special Order</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">FAQ</a>
+                <a href="#reviews" class="smooth-link">Reviews</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="#">Instagram</a>
+                <a href="#">WhatsApp</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+        <div class="footer-giant-text">YARNY</div>
+        <div class="footer-bottom">
+            <span>© 2026 Yarny. All rights reserved.</span>
+            <span>Handcrafted in Tanger, Morocco</span>
+        </div>
+        <div class="architect-signature">
+            <div class="architect-line"></div>
+            <span class="architect-text">Digital Architecture by <em>Ayman Lekhal</em></span>
+        </div>
+    </footer>
+
+    <!-- CART -->
+    <div class="cart-overlay-bg" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <!-- FIXED HEADER -->
+        <div class="drawer-fixed-top">
+            <div class="cart-header">
+                <div class="cart-header-left">
+                    <span class="cart-header-eyebrow">Yarny</span>
+                    <h3>Your Bag <span id="cartCountHeader">(0)</span></h3>
+                </div>
+                <button class="close-icon-btn" id="closeCart"><i class="ph ph-x"></i></button>
+            </div>
+            <div class="shipping-tracker">
+                <p id="shippingText">Add <strong>500 MAD</strong> for Free Shipping</p>
+                <div class="progress-track"><div class="progress-fill" id="shippingBar"></div></div>
+            </div>
+        </div>
+        <!-- SCROLLABLE ITEMS -->
+        <div class="drawer-scroll-body">
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart-msg">
+                    <div class="empty-cart-icon-wrap"><i class="ph ph-handbag"></i></div>
+                    <p>Your bag is empty</p>
+                    <small>Add something beautiful</small>
+                </div>
+            </div>
+        </div>
+        <!-- FIXED FOOTER -->
+        <div class="drawer-fixed-footer">
+            <div class="cart-footer-receipt">
+                <div class="receipt-row"><span>Subtotal</span><span id="cartSubtotal">0.00 MAD</span></div>
+                <div class="receipt-row"><span>Shipping</span><span id="cartShipping">Calculated at checkout</span></div>
+                <div class="receipt-row receipt-vat"><span>VAT <small>(20%)</small></span><span id="cartVAT">0.00 MAD</span></div>
+                <div class="receipt-divider"></div>
+                <div class="receipt-total-row"><span>Total</span><span id="cartFinalTotal">0.00 MAD</span></div>
+                <button class="btn-prestige full-width" id="checkoutBtn"><span>Secure Checkout</span> <i class="ph ph-lock-key"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- WISHLIST DRAWER -->
+    <div class="cart-overlay-bg" id="wishlistOverlay"></div>
+    <div class="cart-drawer" id="wishlistDrawer">
+        <!-- FIXED HEADER -->
+        <div class="drawer-fixed-top">
+            <div class="cart-header">
+                <div class="cart-header-left">
+                    <span class="cart-header-eyebrow">Yarny</span>
+                    <h3>Wishlist <span id="wishlistCountHeader">(0)</span></h3>
+                </div>
+                <button class="close-icon-btn" id="closeWishlist"><i class="ph ph-x"></i></button>
+            </div>
+        </div>
+        <!-- SCROLLABLE ITEMS -->
+        <div class="drawer-scroll-body">
+            <div class="cart-items" id="wishlistItems">
+                <div class="empty-cart-msg" id="wishlistEmpty">
+                    <div class="empty-cart-icon-wrap"><i class="ph ph-heart"></i></div>
+                    <p>No favorites yet</p>
+                    <small>Tap the heart on any piece you love</small>
+                </div>
+            </div>
+        </div>
+        <!-- FIXED FOOTER -->
+        <div class="drawer-fixed-footer">
+            <div class="cart-footer-receipt">
+                <button class="btn-prestige full-width" id="wishlistToCartAll">
+                    <span>Add All to Bag</span> <i class="ph ph-handbag"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUICK VIEW MODAL -->
+    <div class="qv-overlay" id="qvOverlay"></div>
+    <div class="qv-modal" id="qvModal">
+        <button class="qv-close" id="qvClose"><i class="ph ph-x"></i></button>
+        <div class="qv-inner">
+            <div class="qv-img-wrap">
+                <img src="" alt="" id="qvImg" class="qv-img">
+                <div class="qv-img-tag">Handmade</div>
+            </div>
+            <div class="qv-info">
+                <span class="qv-eyebrow">Yarny Collection</span>
+                <h2 class="qv-name" id="qvName">Product Name</h2>
+                <div class="qv-price-row">
+                    <span class="qv-price" id="qvPrice">0 MAD</span>
+                    <span class="qv-badge">Limited Edition</span>
+                </div>
+                <p class="qv-desc" id="qvDesc">Description here.</p>
+                <div class="qv-divider"></div>
+                <div class="qv-actions">
+                    <button class="btn-prestige qv-add-cart" id="qvAddCart">
+                        <span>Add to Bag</span><i class="ph ph-handbag"></i>
+                    </button>
+                    <button class="qv-heart-btn" id="qvAddWishlist" title="Add to Wishlist">
+                        <i class="ph ph-heart"></i>
+                    </button>
+                </div>
+                <p class="qv-trust"><i class="ph ph-shield-check"></i> Authentic handmade · Free returns within 14 days</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHECKOUT MODAL -->
+    <div class="checkout-overlay" id="checkoutOverlay"></div>
+    <div class="checkout-drawer" id="checkoutDrawer">
+        <button class="close-icon-btn checkout-close-btn" id="closeCheckout"><i class="ph ph-x"></i></button>
+
+        <!-- Step indicators -->
+        <div class="checkout-steps" id="checkoutSteps">
+            <div class="ckstep active" data-step="1"><span class="ckstep-num">1</span><span class="ckstep-label">Bag</span></div>
+            <div class="ckstep-line"></div>
+            <div class="ckstep" data-step="2"><span class="ckstep-num">2</span><span class="ckstep-label">Billing</span></div>
+            <div class="ckstep-line"></div>
+            <div class="ckstep" data-step="3"><span class="ckstep-num">3</span><span class="ckstep-label">Payment</span></div>
+            <div class="ckstep-line"></div>
+            <div class="ckstep" data-step="4"><span class="ckstep-num">4</span><span class="ckstep-label">Confirm</span></div>
+        </div>
+
+        <!-- Step 1: Cart Review -->
+        <div class="ck-step-panel active" id="ckStep1">
+            <h3 class="ck-step-title">Review Your Bag</h3>
+            <div class="ck-cart-review" id="ckCartReview"></div>
+            <div class="ck-totals">
+                <div class="receipt-row"><span>Subtotal</span><span id="ckSubtotal">0 MAD</span></div>
+                <div class="receipt-row"><span>Shipping</span><span id="ckShipping">50 MAD</span></div>
+                <div class="receipt-row"><span>VAT (20%)</span><span id="ckVAT">0 MAD</span></div>
+                <div class="receipt-divider"></div>
+                <div class="receipt-total-row"><span>Total</span><span id="ckTotal">0 MAD</span></div>
+            </div>
+            <button class="btn-prestige full-width ck-next" data-next="2"><span>Continue to Billing</span><i class="ph ph-arrow-right"></i></button>
+        </div>
+
+        <!-- Step 2: Billing -->
+        <div class="ck-step-panel" id="ckStep2">
+            <h3 class="ck-step-title">Billing Details</h3>
+            <form class="ck-form" id="ckBillingForm" novalidate>
+                <div class="ck-form-row">
+                    <div class="ck-field"><label>Full Name</label><input type="text" id="ckName" placeholder="Amal Benali" required><span class="ck-error"></span></div>
+                    <div class="ck-field"><label>Email</label><input type="email" id="ckEmail" placeholder="you@example.com" required><span class="ck-error"></span></div>
+                </div>
+                <div class="ck-form-row">
+                    <div class="ck-field"><label>Phone</label><input type="tel" id="ckPhone" placeholder="+212 6xx xxx xxx" required><span class="ck-error"></span></div>
+                    <div class="ck-field"><label>City</label><input type="text" id="ckCity" placeholder="Tanger" required><span class="ck-error"></span></div>
+                </div>
+                <div class="ck-field full"><label>Address</label><input type="text" id="ckAddress" placeholder="123 Rue de la Medina" required><span class="ck-error"></span></div>
+                <div class="ck-field full"><label>Country</label>
+                    <select id="ckCountry" required>
+                        <option value="">Select country</option>
+                        <option value="MA" selected>Morocco</option>
+                        <option value="FR">France</option>
+                        <option value="ES">Spain</option>
+                        <option value="AE">UAE</option>
+                        <option value="US">United States</option>
+                        <option value="OTHER">Other</option>
+                    </select><span class="ck-error"></span>
+                </div>
+            </form>
+            <div class="ck-nav-row">
+                <button class="ck-back" data-back="1"><i class="ph ph-arrow-left"></i> Back</button>
+                <button class="btn-prestige ck-next" data-next="3" id="ckBillingNext"><span>Continue to Payment</span><i class="ph ph-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Step 3: Payment -->
+        <div class="ck-step-panel" id="ckStep3">
+            <h3 class="ck-step-title">Payment</h3>
+            <div class="ck-payment-options">
+                <label class="ck-pay-opt active" id="payOptCard">
+                    <input type="radio" name="payMethod" value="card" checked>
+                    <i class="ph ph-credit-card"></i>
+                    <span>Credit Card</span>
+                    <div class="ck-pay-check"><i class="ph-bold ph-check"></i></div>
+                </label>
+                <label class="ck-pay-opt" id="payOptCOD">
+                    <input type="radio" name="payMethod" value="cod">
+                    <i class="ph ph-money"></i>
+                    <span>Cash on Delivery</span>
+                    <div class="ck-pay-check"><i class="ph-bold ph-check"></i></div>
+                </label>
+            </div>
+
+            <!-- Card fields -->
+            <div class="ck-card-fields" id="ckCardFields">
+                <div class="ck-field full">
+                    <label>Card Number</label>
+                    <input type="text" id="ckCardNum" placeholder="1234 5678 9012 3456" maxlength="19"><span class="ck-error"></span>
+                </div>
+                <div class="ck-form-row">
+                    <div class="ck-field"><label>Expiry</label><input type="text" id="ckExpiry" placeholder="MM / YY" maxlength="7"><span class="ck-error"></span></div>
+                    <div class="ck-field"><label>CVV</label><input type="password" id="ckCVV" placeholder="•••" maxlength="3"><span class="ck-error"></span></div>
+                </div>
+            </div>
+
+            <!-- COD note -->
+            <div class="ck-cod-note" id="ckCODNote" style="display:none">
+                <i class="ph ph-info"></i>
+                <p>Pay in cash when your order arrives at your door. Available within Morocco only.</p>
+            </div>
+
+            <div class="ck-nav-row">
+                <button class="ck-back" data-back="2"><i class="ph ph-arrow-left"></i> Back</button>
+                <button class="btn-prestige" id="ckPayNow"><span>Place Order</span><i class="ph ph-lock-key"></i></button>
+            </div>
+        </div>
+
+        <!-- Step 4: Confirmation -->
+        <div class="ck-step-panel" id="ckStep4">
+            <div class="ck-confirm-wrap">
+                <div class="ck-confirm-anim" id="ckConfirmAnim">
+                    <svg class="ck-check-svg" viewBox="0 0 80 80">
+                        <circle class="ck-check-circle" cx="40" cy="40" r="35"/>
+                        <path class="ck-check-tick" d="M24 40 L35 51 L56 29"/>
+                    </svg>
+                </div>
+                <h2 class="ck-confirm-title">Order Confirmed</h2>
+                <p class="ck-confirm-sub">Thank you for your order. Our artisans will begin crafting your piece with love.</p>
+                <div class="ck-confirm-num">Order #<span id="ckOrderNum">YRN-0000</span></div>
+                <div class="ck-confirm-detail">
+                    <div><i class="ph ph-clock"></i> Estimated 5-10 working days</div>
+                    <div><i class="ph ph-envelope"></i> Confirmation sent to <span id="ckConfirmEmail">your email</span></div>
+                </div>
+                <button class="btn-prestige" id="ckDoneBtn"><span>Continue Shopping</span><i class="ph ph-sparkle"></i></button>
+            </div>
+        </div>
+
+        <!-- Processing overlay -->
+        <div class="ck-processing" id="ckProcessing">
+            <div class="ck-proc-spinner"></div>
+            <p>Processing your order…</p>
+            <small>Please wait</small>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div id="welcomeToast" class="toast">
+        <div class="toast-icon"><i class="ph ph-check"></i></div>
+        <div class="toast-text"><h4>Success</h4><p id="welcomeMsg">Welcome.</p></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
