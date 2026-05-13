@@ -11467,3 +11467,350 @@ section {
   opacity: 1 !important;
   visibility: visible !important;
 }
+
+/* ════════════════════════════════════════════════════════════════
+   MOBILE FIXES — all 8 fixes consolidated
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── FIX 1: Product cards → 2 columns ── */
+  .pro-cards-wrapper,
+  .products-grid,
+  .pro-grid,
+  .cards-grid,
+  .section-products,
+  #clothes .container,
+  #men .container,
+  #bags .container,
+  #baby .container,
+  #clothes > div,
+  #men > div,
+  #bags > div,
+  #baby > div {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    padding: 0 16px 40px 16px !important;
+  }
+
+  .pro-card-image img,
+  .pro-card img {
+    width: 100% !important;
+    height: 160px !important;
+    object-fit: cover !important;
+  }
+
+  .pro-card h3,
+  .pro-card-name,
+  .pro-card > p:first-of-type {
+    font-size: 0.82rem !important;
+    line-height: 1.3 !important;
+    margin-top: 8px !important;
+  }
+
+  .pro-card-price,
+  .pro-card > p:last-of-type {
+    font-size: 0.75rem !important;
+  }
+
+  .pro-card .wishlist-btn,
+  .pro-card .quickview-btn,
+  .pro-card button {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.7rem !important;
+  }
+
+  /* ── FIX 2: Section titles ── */
+  #clothes h2,
+  #men h2,
+  #bags h2,
+  #baby h2,
+  .section-title,
+  .section-header h2 {
+    font-size: clamp(1.8rem, 8vw, 2.8rem) !important;
+    text-align: center !important;
+    padding: 0 20px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .section-eyebrow,
+  .section-label {
+    text-align: center !important;
+    font-size: 0.52rem !important;
+    letter-spacing: 0.25em !important;
+  }
+
+  #clothes,
+  #men,
+  #bags,
+  #baby {
+    padding: 60px 0 !important;
+  }
+
+  /* ── FIX 3: Team cards → 2 columns ── */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    padding: 0 16px 40px !important;
+  }
+
+  .team-card:nth-child(1),
+  .team-card:nth-child(2),
+  .team-card:nth-child(3),
+  .team-card:nth-child(4) {
+    margin-top: 0 !important;
+  }
+
+  .team-card-image {
+    aspect-ratio: 3/4 !important;
+    border-radius: 60px 60px 12px 12px !important;
+  }
+
+  .team-bg-name {
+    font-size: clamp(2rem, 8cqh, 4rem) !important;
+  }
+
+  /* ── FIX 4: Moroccan bags section ── */
+  #bags .moroccan-section,
+  .moroccan-bags,
+  #bags > section,
+  .moroccan-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    padding: 0 16px !important;
+  }
+
+  .moroccan-card,
+  .arch-card {
+    height: 200px !important;
+    border-radius: 80px 80px 8px 8px !important;
+  }
+
+  /* ── FIX 5: Add to bag button always visible ── */
+  .pro-card .add-to-bag-bar,
+  .add-to-bag-btn,
+  .pro-card-footer {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    height: 44px !important;
+    font-size: 0.6rem !important;
+    letter-spacing: 0.2em !important;
+  }
+
+  /* ── FIX 6: Collections grid → 2×2 ── */
+  .collections-grid,
+  #showcase .showcase-grid,
+  #showcase > div:last-child {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 240px 240px !important;
+    gap: 4px !important;
+  }
+
+  .showcase-card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: 240px !important;
+  }
+
+  .showcase-card-title {
+    font-size: 1.6rem !important;
+  }
+
+  .showcase-card-eyebrow {
+    font-size: 0.48rem !important;
+  }
+
+  /* ── FIX 7: Hero mobile ── */
+  .hero-master {
+    padding: 0 20px !important;
+  }
+
+  .hero-master h1,
+  .hero-title {
+    font-size: clamp(2.2rem, 9vw, 3.5rem) !important;
+    text-align: center !important;
+  }
+
+  .hero-stats {
+    justify-content: center !important;
+    gap: 20px !important;
+  }
+
+  .hero-cta-btn,
+  .hero-cta {
+    margin: 0 auto !important;
+    display: block !important;
+    text-align: center !important;
+  }
+
+  /* ── FIX 8: Reviews mobile ── */
+  #reviews .reviews-track,
+  .reviews-row {
+    gap: 12px !important;
+  }
+
+  .review-card {
+    min-width: 260px !important;
+    max-width: 280px !important;
+    padding: 20px !important;
+  }
+
+  .review-card p {
+    font-size: 0.82rem !important;
+    line-height: 1.7 !important;
+  }
+
+  /* ── FIX 1: Product section layout ── */
+  #clothes,
+  #men,
+  #bags,
+  #baby {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 48px 0 !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  #clothes h2,
+  #men h2,
+  #bags h2,
+  #baby h2,
+  #clothes .section-title,
+  #men .section-title,
+  #bags .section-title,
+  #baby .section-title,
+  #clothes .section-header,
+  #men .section-header,
+  #bags .section-header,
+  #baby .section-header {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0 20px !important;
+    margin-bottom: 32px !important;
+    float: none !important;
+    position: relative !important;
+  }
+
+  #clothes .pro-cards,
+  #men .pro-cards,
+  #bags .pro-cards,
+  #baby .pro-cards,
+  #clothes [class*="grid"],
+  #men [class*="grid"],
+  #bags [class*="grid"],
+  #baby [class*="grid"],
+  #clothes [class*="cards"],
+  #men [class*="cards"],
+  #bags [class*="cards"],
+  #baby [class*="cards"] {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 14px !important;
+    padding: 0 16px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    float: none !important;
+  }
+
+  .pro-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .pro-card-image,
+  .pro-card img {
+    width: 100% !important;
+    height: 150px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .pro-card h3,
+  .pro-card-name {
+    font-size: 0.78rem !important;
+    line-height: 1.3 !important;
+    padding: 8px 8px 0 !important;
+    margin: 0 !important;
+  }
+
+  .pro-card-price {
+    font-size: 0.72rem !important;
+    padding: 4px 8px 8px !important;
+  }
+
+  /* ── FIX 2: Add to bag always visible ── */
+  .pro-card .add-to-bag-bar,
+  [class*="add-to-bag"],
+  [class*="add-bag"] {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    height: 38px !important;
+    font-size: 0.55rem !important;
+    letter-spacing: 0.15em !important;
+  }
+
+  /* ── FIX 3: Team cards not too tall ── */
+  .team-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    padding: 0 16px 40px !important;
+    margin-top: 0 !important;
+  }
+
+  .team-card {
+    margin-top: 0 !important;
+  }
+
+  .team-card:nth-child(1),
+  .team-card:nth-child(2),
+  .team-card:nth-child(3),
+  .team-card:nth-child(4) {
+    margin-top: 0 !important;
+  }
+
+  .team-card-image {
+    aspect-ratio: 3/4 !important;
+    border-radius: 50px 50px 10px 10px !important;
+    height: auto !important;
+    max-height: 280px !important;
+  }
+
+  .team-card-image img {
+    height: 85% !important;
+    width: 85% !important;
+    object-fit: contain !important;
+    object-position: bottom center !important;
+  }
+
+  .team-bg-name {
+    font-size: clamp(1.8rem, 6cqh, 3.5rem) !important;
+  }
+
+  /* ── FIX 4: Disable float animation on mobile ── */
+  .team-card {
+    animation: none !important;
+    transform: none !important;
+    transition: transform 0.3s ease !important;
+  }
+
+  /* ── FIX 5: Prevent horizontal scroll ── */
+  * {
+    max-width: 100vw !important;
+  }
+
+  body,
+  html {
+    overflow-x: hidden !important;
+  }
+
+  section {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+} /* end @media (max-width: 768px) mobile fixes */

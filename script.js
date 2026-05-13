@@ -2019,28 +2019,30 @@ function initTeamAnimations() {
     }
   });
 
-  /* Floating animation on each card */
-  document.querySelectorAll('.team-card')
-    .forEach((card, i) => {
+  /* Floating animation on each card — desktop only */
+  if (window.innerWidth > 768) {
+    document.querySelectorAll('.team-card')
+      .forEach((card, i) => {
 
-      gsap.to(card, {
-        y: -10,
-        duration: 2 + (i * 0.5),
-        ease: 'sine.inOut',
-        yoyo: true,
-        repeat: -1,
-        delay: i * 0.7
-      })
+        gsap.to(card, {
+          y: -10,
+          duration: 2 + (i * 0.5),
+          ease: 'sine.inOut',
+          yoyo: true,
+          repeat: -1,
+          delay: i * 0.7
+        })
 
-      gsap.to(card, {
-        rotation: i % 2 === 0 ? 1.2 : -1.2,
-        duration: 3 + (i * 0.4),
-        ease: 'sine.inOut',
-        yoyo: true,
-        repeat: -1,
-        delay: i * 0.5
+        gsap.to(card, {
+          rotation: i % 2 === 0 ? 1.2 : -1.2,
+          duration: 3 + (i * 0.4),
+          ease: 'sine.inOut',
+          yoyo: true,
+          repeat: -1,
+          delay: i * 0.5
+        })
       })
-    })
+  }
 
   /* Mouse parallax on the grid */
   const grid = document.querySelector('.team-grid');
