@@ -11813,4 +11813,64 @@ section {
     max-width: 100vw !important;
   }
 
+  /* ── FIX: Showcase collections grid ── */
+  .collections-grid,
+  #showcase .collections-grid,
+  #showcase [class*="grid"],
+  #showcase [class*="cards"] {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 220px 220px !important;
+    gap: 3px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .showcase-card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: 220px !important;
+    min-height: unset !important;
+    width: 100% !important;
+  }
+
+  .showcase-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .showcase-card-title {
+    font-size: 1.4rem !important;
+  }
+
+  .showcase-card-eyebrow {
+    font-size: 0.45rem !important;
+    letter-spacing: 0.2em !important;
+  }
+
+  .showcase-card-discover {
+    font-size: 0.5rem !important;
+  }
+
+  .showcase-card-badge {
+    font-size: 0.45rem !important;
+    padding: 4px 8px !important;
+    top: 12px !important;
+    right: 12px !important;
+  }
+
+  .showcase-card-content {
+    padding: 20px 16px !important;
+  }
+
+  #showcase {
+    background: transparent !important;
+  }
+
+  #showcase > * {
+    min-height: unset !important;
+  }
+
 } /* end @media (max-width: 768px) mobile fixes */
