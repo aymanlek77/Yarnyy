@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YARNY | Handmade Luxury</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="loading">
 
     <!-- PRELOADER -->
     <div class="preloader" id="preloader">
         <div class="loader-content">
             <h1 class="loader-logo">YARNY</h1>
-            <div class="loader-line-box"><div class="loader-line-fill"></div></div>
+            <div class="loader-line-box">
+                <div class="loader-line-fill"></div>
+            </div>
             <div class="loader-counter" id="loaderCounter">0%</div>
         </div>
         <div class="curtain-l"></div>
@@ -58,7 +64,8 @@
                                 <label for="logPass">Password</label>
                                 <i class="ph ph-eye toggle-password" onclick="togglePassword('logPass', this)"></i>
                             </div>
-                            <button type="submit" class="btn-prestige full-width"><span>Sign In</span> <i class="ph ph-arrow-right"></i></button>
+                            <button type="submit" class="btn-prestige full-width"><span>Sign In</span> <i
+                                    class="ph ph-arrow-right"></i></button>
                         </form>
                         <div class="switch-link">New? <a onclick="showRegister()">Create Account</a></div>
                     </div>
@@ -69,14 +76,17 @@
                             <p class="subtitle">Begin your handmade journey.</p>
                         </div>
                         <form id="registerForm">
-                            <div class="modern-input"><input type="text" id="regName" required placeholder=" "><label>Full Name</label></div>
-                            <div class="modern-input"><input type="email" id="regEmail" required placeholder=" "><label>Email Address</label></div>
+                            <div class="modern-input"><input type="text" id="regName" required
+                                    placeholder=" "><label>Full Name</label></div>
+                            <div class="modern-input"><input type="email" id="regEmail" required
+                                    placeholder=" "><label>Email Address</label></div>
                             <div class="modern-input">
                                 <input type="password" id="regPass" required placeholder=" ">
                                 <label for="regPass">Password</label>
                                 <i class="ph ph-eye toggle-password" onclick="togglePassword('regPass', this)"></i>
                             </div>
-                            <button type="submit" class="btn-prestige full-width"><span>Register</span> <i class="ph ph-arrow-right"></i></button>
+                            <button type="submit" class="btn-prestige full-width"><span>Register</span> <i
+                                    class="ph ph-arrow-right"></i></button>
                         </form>
                         <div class="switch-link">Member? <a onclick="showLogin()">Sign In</a></div>
                     </div>
@@ -87,7 +97,8 @@
                             <p class="subtitle">You are currently signed in.</p>
                             <div class="profile-divider"></div>
                             <div class="profile-actions">
-                                <button class="btn-prestige full-width" id="logoutBtn"><span>Sign Out</span> <i class="ph ph-sign-out"></i></button>
+                                <button class="btn-prestige full-width" id="logoutBtn"><span>Sign Out</span> <i
+                                        class="ph ph-sign-out"></i></button>
                             </div>
                         </div>
                     </div>
@@ -98,10 +109,12 @@
 
     <!-- NAVBAR -->
     <nav class="navbar">
-        <a href="#" class="logo-wrapper"><img src="assets/logo.png" alt="Yarny Logo" class="nav-logo-img"></a>
+        <a href="#" class="logo-wrapper"><img src="assets/Yarnynewlogo.png" alt="Yarny Logo" class="nav-logo-img"></a>
         <ul class="nav-links">
             <li><a href="#showcase" class="smooth-link">Collections</a></li>
+            <li><a href="#moroccan-touch" class="smooth-link">Moroccan Touch</a></li>
             <li><a href="#clothes" class="smooth-link">Clothes</a></li>
+            <li><a href="#men" class="smooth-link">Men</a></li>
             <li><a href="#bags" class="smooth-link">Bags</a></li>
             <li><a href="#baby" class="smooth-link">Baby</a></li>
             <li><a href="#special" class="smooth-link">Special Order</a></li>
@@ -110,7 +123,8 @@
         <div class="nav-actions">
             <!-- User button + dropdown -->
             <div class="user-dropdown-wrap" id="userDropdownWrap">
-                <button class="icon-btn" id="userBtn"><i class="ph ph-user"></i><span class="status-dot" id="statusDot"></span></button>
+                <button class="icon-btn" id="userBtn"><i class="ph ph-user"></i><span class="status-dot"
+                        id="statusDot"></span></button>
                 <div class="user-dropdown" id="userDropdown">
                     <div class="user-dropdown-header">
                         <span class="user-dropdown-name" id="dropdownName">Guest</span>
@@ -120,13 +134,16 @@
                     <a href="#" class="user-dropdown-item" id="ddProfile"><i class="ph ph-user-circle"></i> Profile</a>
                     <a href="#" class="user-dropdown-item" id="ddOrders"><i class="ph ph-package"></i> My Orders</a>
                     <div class="user-dropdown-divider"></div>
-                    <a href="#" class="user-dropdown-item user-dropdown-logout" id="ddLogout"><i class="ph ph-sign-out"></i> Sign Out</a>
+                    <a href="#" class="user-dropdown-item user-dropdown-logout" id="ddLogout"><i
+                            class="ph ph-sign-out"></i> Sign Out</a>
                 </div>
             </div>
             <!-- Wishlist -->
-            <button class="icon-btn" id="openWishlist" title="Wishlist"><i class="ph ph-heart"></i><span class="cart-count" id="wishlistCount" style="display:none">0</span></button>
+            <button class="icon-btn" id="openWishlist" title="Wishlist"><i class="ph ph-heart"></i><span
+                    class="cart-count" id="wishlistCount" style="display:none">0</span></button>
             <!-- Cart -->
-            <button class="icon-btn" id="openCart"><i class="ph ph-handbag"></i><span class="cart-count" id="cartCount">0</span></button>
+            <button class="icon-btn" id="openCart"><i class="ph ph-handbag"></i><span class="cart-count"
+                    id="cartCount">0</span></button>
         </div>
     </nav>
 
@@ -137,7 +154,7 @@
             <div class="dark-overlay-strong"></div>
         </div>
         <div class="hero-content-container">
-<div class="hero-text-block">
+            <div class="hero-text-block">
                 <span class="hero-subtitle">Wrap yourself in a</span>
                 <h1 class="hero-title-main">Yarny Warmth</h1>
             </div>
@@ -163,7 +180,9 @@
             </a>
         </div>
         <div class="scroll-icon">
-            <div class="mouse-shape"><div class="wheel-anim"></div></div>
+            <div class="mouse-shape">
+                <div class="wheel-anim"></div>
+            </div>
             <span class="scroll-label">Scroll</span>
         </div>
     </header>
@@ -171,86 +190,162 @@
     <!-- MARQUEE -->
     <div class="marquee-strip">
         <div class="track">
-            <span>✦ HANDMADE LUXURY ✦ SUSTAINABLE COTTON ✦ MOROCCAN CRAFTSMANSHIP ✦ CUSTOM DESIGNS ✦ TANGER ATELIER ✦ BESPOKE PIECES</span>
-            <span>✦ HANDMADE LUXURY ✦ SUSTAINABLE COTTON ✦ MOROCCAN CRAFTSMANSHIP ✦ CUSTOM DESIGNS ✦ TANGER ATELIER ✦ BESPOKE PIECES</span>
+            <span>✦ HANDMADE LUXURY ✦ SUSTAINABLE COTTON ✦ MOROCCAN CRAFTSMANSHIP ✦ CUSTOM DESIGNS ✦ TANGER ATELIER ✦
+                BESPOKE PIECES</span>
+            <span>✦ HANDMADE LUXURY ✦ SUSTAINABLE COTTON ✦ MOROCCAN CRAFTSMANSHIP ✦ CUSTOM DESIGNS ✦ TANGER ATELIER ✦
+                BESPOKE PIECES</span>
         </div>
     </div>
+
+    <!-- YARNY VIDEO SECTION -->
+    <section class="yarny-video-section" id="yarnyVideoSection">
+        <video
+            class="yarny-video-bg"
+            id="yarnyVideoBg"
+            src="yarnyanimation.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+        ></video>
+        <div class="yarny-video-overlay"></div>
+    </section>
 
     <!-- COLLECTIONS SHOWCASE -->
     <section id="showcase" class="showcase-compact">
 
         <!-- ── EDITORIAL HEADER ─────────────────────── -->
         <div class="coll-header">
-            <div class="coll-header-left">
-                <span class="coll-eyebrow">
-                    <span class="coll-eyebrow-line"></span>
-                    Explore
-                </span>
-                <h2 class="coll-title"><span class="coll-title-our">Our</span> Collections</h2>
-            </div>
-            <div class="coll-header-right">
-                <p class="coll-header-desc">Three handcrafted worlds — each piece a labour of love, born in our Tanger atelier from the finest Moroccan yarn.</p>
-                <div class="coll-header-meta">
-                    <span class="coll-meta-num">03</span>
-                    <span class="coll-meta-label">Collections</span>
+
+            <!-- TOP marquee bar -->
+            <div class="showcase-marquee-bar">
+                <div class="showcase-marquee-track">
+                    <span>READY TO WEAR</span>
+                    <span class="smq-dot">◆</span>
+                    <span>MEN'S KNITWEAR</span>
+                    <span class="smq-dot">◆</span>
+                    <span>HANDMADE BAGS</span>
+                    <span class="smq-dot">◆</span>
+                    <span>NEWBORN LUXURY</span>
+                    <span class="smq-dot">◆</span>
+                    <span>MOROCCAN ATELIER</span>
+                    <span class="smq-dot">◆</span>
+                    <span>TANGER · MAROC</span>
+                    <span class="smq-dot">◆</span>
+                    <span>READY TO WEAR</span>
+                    <span class="smq-dot">◆</span>
+                    <span>MEN'S KNITWEAR</span>
+                    <span class="smq-dot">◆</span>
+                    <span>HANDMADE BAGS</span>
+                    <span class="smq-dot">◆</span>
+                    <span>NEWBORN LUXURY</span>
+                    <span class="smq-dot">◆</span>
+                    <span>MOROCCAN ATELIER</span>
+                    <span class="smq-dot">◆</span>
+                    <span>TANGER · MAROC</span>
+                    <span class="smq-dot">◆</span>
                 </div>
             </div>
-        </div>
 
-        <!-- ── STAGGERED CARD GRID ──────────────────── -->
+            <!-- Centred content -->
+            <div class="showcase-header-center">
+                <span class="showcase-eyebrow">✦ Our Collections ✦</span>
+                <h2 class="showcase-main-title">
+                    <span class="title-word-our">Our</span><span class="title-word-collections"> Collections</span>
+                </h2>
+                <p class="showcase-subtitle">Where artisan craft meets modern luxury</p>
+                <div class="showcase-deco">
+                    <span class="showcase-deco-line showcase-deco-line-left"></span>
+                    <span class="showcase-deco-diamond">◆</span>
+                    <span class="showcase-deco-line showcase-deco-line-right"></span>
+                </div>
+            </div>
+
+            <!-- BOTTOM marquee bar (reverse) -->
+            <div class="showcase-marquee-bar showcase-marquee-bar--reverse">
+                <div class="showcase-marquee-track showcase-marquee-track--reverse">
+                    <span>ATELIER YARNY</span>
+                    <span class="smq-dot">◆</span>
+                    <span>LUXURY YARN</span>
+                    <span class="smq-dot">◆</span>
+                    <span>MADE IN MOROCCO</span>
+                    <span class="smq-dot">◆</span>
+                    <span>ARTISAN MADE</span>
+                    <span class="smq-dot">◆</span>
+                    <span>MOROCCAN HERITAGE</span>
+                    <span class="smq-dot">◆</span>
+                    <span>PURE WOOL</span>
+                    <span class="smq-dot">◆</span>
+                    <span>ATELIER YARNY</span>
+                    <span class="smq-dot">◆</span>
+                    <span>LUXURY YARN</span>
+                    <span class="smq-dot">◆</span>
+                    <span>MADE IN MOROCCO</span>
+                    <span class="smq-dot">◆</span>
+                    <span>ARTISAN MADE</span>
+                    <span class="smq-dot">◆</span>
+                    <span>MOROCCAN HERITAGE</span>
+                    <span class="smq-dot">◆</span>
+                    <span>PURE WOOL</span>
+                    <span class="smq-dot">◆</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="showcase-fade"></div>
+
+        <!-- ── 2×2 FULL-BLEED CARD GRID ──────────────── -->
         <div class="coll-grid">
 
-            <!-- Card 1 — Clothing -->
-            <a href="#clothes" class="compact-card smooth-link" data-index="01">
-                <div class="compact-img-box">
-                    <img src="assets/cat-clothes.jpg" alt="Clothing">
-                    <div class="coll-img-shine"></div>
-                    <span class="compact-item-count">4 Pieces</span>
-                </div>
-                <div class="coll-card-body">
-                    <span class="compact-category">Ready to Wear</span>
-                    <h3>Clothing</h3>
-                    <div class="coll-card-cta">
-                        <span class="coll-cta-line"></span>
-                        <span class="coll-cta-text">Discover</span>
-                        <i class="ph ph-arrow-right"></i>
-                    </div>
+            <!-- Card 1 — Clothing (top-left, wide) -->
+            <a href="#clothes" class="showcase-card smooth-link">
+                <img src="assets/col-clothes.png" alt="Clothing Collection">
+                <span class="showcase-card-badge">4 Pieces</span>
+                <div class="showcase-card-content">
+                    <span class="showcase-card-eyebrow">Ready to Wear</span>
+                    <h3 class="showcase-card-title">Clothing</h3>
+                    <span class="showcase-card-discover">
+                        Discover <span class="discover-line"></span>
+                    </span>
                 </div>
             </a>
 
-            <!-- Card 2 — Bags (staggered down) -->
-            <a href="#bags" class="compact-card smooth-link coll-card-offset-2" data-index="02">
-                <div class="compact-img-box">
-                    <img src="assets/cat-bags.jpg" alt="Bags">
-                    <div class="coll-img-shine"></div>
-                    <span class="compact-item-count">4 Pieces</span>
-                </div>
-                <div class="coll-card-body">
-                    <span class="compact-category">Handmade</span>
-                    <h3>Handbags</h3>
-                    <div class="coll-card-cta">
-                        <span class="coll-cta-line"></span>
-                        <span class="coll-cta-text">Discover</span>
-                        <i class="ph ph-arrow-right"></i>
-                    </div>
+            <!-- Card 2 — Men (top-right, narrow) -->
+            <a href="#men" class="showcase-card smooth-link">
+                <img src="assets/col-men.png" alt="Men's Collection">
+                <span class="showcase-card-badge">4 Pieces</span>
+                <div class="showcase-card-content">
+                    <span class="showcase-card-eyebrow">Men's Knitwear</span>
+                    <h3 class="showcase-card-title">Men</h3>
+                    <span class="showcase-card-discover">
+                        Discover <span class="discover-line"></span>
+                    </span>
                 </div>
             </a>
 
-            <!-- Card 3 — Baby (staggered mid) -->
-            <a href="#baby" class="compact-card smooth-link coll-card-offset-3" data-index="03">
-                <div class="compact-img-box">
-                    <img src="assets/cat-baby.jpg" alt="Baby">
-                    <div class="coll-img-shine"></div>
-                    <span class="compact-item-count">4 Pieces</span>
+            <!-- Card 3 — Handbags (bottom-left, narrow) -->
+            <a href="#bags" class="showcase-card smooth-link">
+                <img src="assets/col-bags.png" alt="Handbags Collection">
+                <span class="showcase-card-badge">4 Pieces</span>
+                <div class="showcase-card-content">
+                    <span class="showcase-card-eyebrow">Handmade</span>
+                    <h3 class="showcase-card-title">Handbags</h3>
+                    <span class="showcase-card-discover">
+                        Discover <span class="discover-line"></span>
+                    </span>
                 </div>
-                <div class="coll-card-body">
-                    <span class="compact-category">Little Ones</span>
-                    <h3>Baby</h3>
-                    <div class="coll-card-cta">
-                        <span class="coll-cta-line"></span>
-                        <span class="coll-cta-text">Discover</span>
-                        <i class="ph ph-arrow-right"></i>
-                    </div>
+            </a>
+
+            <!-- Card 4 — Baby (bottom-right, wide) -->
+            <a href="#baby" class="showcase-card smooth-link">
+                <img src="assets/col-baby.png" alt="Baby Collection">
+                <span class="showcase-card-badge">4 Pieces</span>
+                <div class="showcase-card-content">
+                    <span class="showcase-card-eyebrow">Newborn Luxury</span>
+                    <h3 class="showcase-card-title">Baby</h3>
+                    <span class="showcase-card-discover">
+                        Discover <span class="discover-line"></span>
+                    </span>
                 </div>
             </a>
 
@@ -276,21 +371,446 @@
 
     </section>
 
+    <!-- ══════════════════════════════════════════════════════════════════════
+         MOROCCO YARNY — FULL-WIDTH BANNER  [FIXED]
+    ══════════════════════════════════════════════════════════════════════ -->
+    <section class="moroccoyarny-banner" id="moroccoyarny-banner">
+        <div class="moroccoyarny-overlay"></div>
+        <div class="moroccoyarny-shimmer"></div>
+        <img src="assets/Morocco-sectionr-Image.jpg.optimal.jpg" alt="Morocco Yarny" class="moroccoyarny-img">
+        <div class="moroccoyarny-content">
+            <span class="moroccoyarny-eyebrow">✦ THE SPIRIT OF YARNY ✦</span>
+            <h2 class="moroccoyarny-title">
+                <span class="myt-line myt-line--where">Where</span>
+                <span class="myt-line myt-line--morocco">Morocco</span>
+                <span class="myt-line myt-line--meets"><em>Meets Craftsmanship</em></span>
+            </h2>
+            <div class="moroccoyarny-divider">
+                <div class="moroccoyarny-diamond"></div>
+            </div>
+            <p class="moroccoyarny-desc">Each thread carries the soul of Morocco — woven with tradition, worn with pride.</p>
+            <a href="#moroccan-touch" class="moroccoyarny-btn smooth-link">
+                <span>Explore the Heritage</span>
+                <i class="ph ph-arrow-right"></i>
+            </a>
+        </div>
+        <div class="moroccoyarny-particles">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+        </div>
+    </section>
+
+    <!-- === MOROCCO GRADIENT + DIVIDER START === -->
+    <div class="morocco-bridge-divider" aria-hidden="true">
+        <div class="mbd-side mbd-side--left">
+            <div class="mbd-glow mbd-glow--left"></div>
+        </div>
+        <div class="mbd-center">
+            <div class="mbd-diamond-outer">
+                <div class="mbd-diamond-inner"></div>
+            </div>
+        </div>
+        <div class="mbd-side mbd-side--right">
+            <div class="mbd-glow mbd-glow--right"></div>
+        </div>
+    </div>
+    <!-- === MOROCCO GRADIENT + DIVIDER END === -->
+
+    <!-- ══════════════════════════════════════════════════════════════════════
+         MOROCCAN TOUCH — LIGHT LUXURY SECTION v5
+         Warm zellige bg, hero row, SVG map, arch cards, stats bar
+    ══════════════════════════════════════════════════════════════════════ -->
+    <section id="moroccan-touch" class="moroccan-section">
+
+
+        <!-- Zellige texture layer (real image, very low opacity) -->
+        <div class="moroccan-zellige-bg" aria-hidden="true"></div>
+
+        <!-- ── HEADER ────────────────────────────────────────────── -->
+        <div class="moroccan-header">
+            <span class="moroccan-eyebrow">✦ THE HEART OF YARNY ✦</span>
+            <h2 class="moroccan-title">The <span class="moroccan-gold">Moroccan</span> Touch</h2>
+            <p class="moroccan-subtitle">Where centuries of craftsmanship meet modern luxury</p>
+            <div class="moroccan-divider">
+                <div class="moroccan-divider-diamond"></div>
+            </div>
+        </div>
+
+        <!-- ── HERO ROW — image + text ───────────────────────────── -->
+        <div class="moroccan-hero-row">
+            <div class="moroccan-hero-img">
+                <img src="assets/l-steward-masweneng-axTLYW8opeU-unsplash.png" alt="Moroccan Heritage Craftsmanship">
+            </div>
+            <div class="moroccan-hero-text">
+                <span class="moroccan-hero-tag">Our Heritage</span>
+                <h3>Every Thread Tells a Story</h3>
+                <p>From the ancient medinas of Fès to the blue-washed walls of Chefchaouen, every YARNY piece carries
+                    the soul of Morocco. Our master artisans — women who learned their craft from their grandmothers —
+                    weave centuries of tradition into every stitch. We don't just make products. We preserve a legacy.
+                </p>
+                <div class="moroccan-heritage-stats">
+                    <div class="moroccan-stat-item">
+                        <span class="moroccan-stat-num">5</span>
+                        <span class="moroccan-stat-label">Regions</span>
+                    </div>
+                    <div class="moroccan-stat-item">
+                        <span class="moroccan-stat-num">15+</span>
+                        <span class="moroccan-stat-label">Artisans</span>
+                    </div>
+                    <div class="moroccan-stat-item">
+                        <span class="moroccan-stat-num">100%</span>
+                        <span class="moroccan-stat-label">Moroccan Yarn</span>
+                    </div>
+                </div>
+                <div class="moroccan-flag-stripe"></div>
+            </div>
+        </div>
+
+        <!-- ── MAP SECTION ───────────────────────────────────────── -->
+        <div class="moroccan-map-section">
+            <div class="morocco-map-wrapper">
+                <div class="morocco-map-img-container">
+                    <img src="assets/Morocco.png" alt="Morocco Map" class="morocco-map-img">
+                </div>
+                <div class="map-side-info">
+                    <span class="map-info-tag">✦ OUR ARTISAN NETWORK ✦</span>
+                    <h3 class="map-info-title">Across the Kingdom</h3>
+                    <p class="map-info-desc">From Chefchaouen's blue peaks to Essaouira's Atlantic coast — four cities,
+                        one heritage. Each region brings its own tradition, colors, and soul to every YARNY piece.</p>
+                    <div class="map-info-cities">
+                        <span><span class="map-city-dot" style="background:#4A90D9"></span> Chefchaouen</span>
+                        <span><span class="map-city-dot" style="background:#a08c66"></span> Fès</span>
+                        <span><span class="map-city-dot" style="background:#792c02"></span> Marrakech</span>
+                        <span><span class="map-city-dot" style="background:#1A6B6A"></span> Tetouan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── PRODUCTS SECTION ──────────────────────────────────── -->
+        <div class="moroccan-products-section">
+            <div class="moroccan-products-header">
+                <span class="moroccan-eyebrow">✦ MOROCCAN COLLECTION ✦</span>
+                <h3>Handcrafted Treasures</h3>
+            </div>
+
+            <div class="moroccan-products-grid">
+
+                <!-- Card 1 — Chefchaouen -->
+                <div class="moroccan-card-wrap" data-city="chefchaouen">
+                    <div class="arch-door">
+                        <div class="arch-door-border"></div>
+                        <div class="arch-door-inner">
+                            <div class="pro-card arch-pro-card" data-name="Chefchaouen Tote" data-price="480"
+                                data-image="assets/CHEFCOUEN.jpeg"
+                                data-description="Handwoven tapestry tote bag inspired by the blue streets of Chefchaouen. Features the iconic Moroccan arch doorway with geometric border patterns in navy, red and cream. Structured base with leather-look handles.">
+                                <div class="pro-img arch-pro-img">
+                                    <img src="assets/CHEFCOUEN.jpeg" alt="Chefchaouen Tote">
+                                    <div class="pro-blur-overlay"></div>
+                                    <span class="pro-card-tag">Chefchaouen</span>
+                                    <div class="pro-card-info">
+                                        <span class="pro-card-name">Chefchaouen Tote</span>
+                                    </div>
+                                    <button class="arch-bag-bar" onclick="addToCart('Chefchaouen Tote', '480 MAD', 'assets/CHEFCOUEN.jpeg', this)">+ ADD TO BAG</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arch-card-footer">
+                        <h4 class="arch-product-title">Chefchaouen Tote</h4>
+                        <span class="arch-product-price">480 MAD</span>
+                        <div class="arch-city-badge">
+                            <span class="arch-city-diamond" style="color:#4A90D9">◆</span>
+                            <span class="arch-city-name">Chefchaouen</span>
+                            <span class="arch-city-sep">·</span>
+                            <span class="arch-city-subtitle">The Blue Pearl</span>
+                        </div>
+                        <button class="btn-wishlist arch-footer-wishlist" data-id="chefchaouen_tote"
+                            title="Wishlist">
+                            <i class="ph ph-heart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 — Marrakech -->
+                <div class="moroccan-card-wrap" data-city="marrakech">
+                    <div class="arch-door">
+                        <div class="arch-door-border"></div>
+                        <div class="arch-door-inner">
+                            <div class="pro-card arch-pro-card" data-name="Camel Crossbody" data-price="550"
+                                data-image="assets/MARRAKECH.jpeg"
+                                data-description="Embroidered crochet crossbody bag featuring a hand-stitched camel motif in warm desert tones. Cream base with tassel accents and wooden bead details. Compact yet spacious interior with magnetic closure.">
+                                <div class="pro-img arch-pro-img">
+                                    <img src="assets/MARRAKECH.jpeg" alt="Camel Crossbody">
+                                    <div class="pro-blur-overlay"></div>
+                                    <span class="pro-card-tag">Marrakech</span>
+                                    <div class="pro-card-info">
+                                        <span class="pro-card-name">Camel Crossbody</span>
+                                    </div>
+                                    <button class="arch-bag-bar" onclick="addToCart('Camel Crossbody', '550 MAD', 'assets/MARRAKECH.jpeg', this)">+ ADD TO BAG</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arch-card-footer">
+                        <h4 class="arch-product-title">Camel Crossbody</h4>
+                        <span class="arch-product-price">550 MAD</span>
+                        <div class="arch-city-badge">
+                            <span class="arch-city-diamond" style="color:#C1272D">◆</span>
+                            <span class="arch-city-name">Marrakech</span>
+                            <span class="arch-city-sep">·</span>
+                            <span class="arch-city-subtitle">The Red City</span>
+                        </div>
+                        <button class="btn-wishlist arch-footer-wishlist" data-id="camel_crossbody" title="Wishlist">
+                            <i class="ph ph-heart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 — Fès -->
+                <div class="moroccan-card-wrap" data-city="fes">
+                    <div class="arch-door">
+                        <div class="arch-door-border"></div>
+                        <div class="arch-door-inner">
+                            <div class="pro-card arch-pro-card" data-name="Evil Eye Clutch" data-price="520"
+                                data-image="assets/CHEFCHAOUEN1.jpeg"
+                                data-description="Statement clutch bag featuring the iconic Moroccan evil eye in vivid cobalt blue. Handcrafted crochet body with tassel and bead details. Inner lining, zip closure. Protective talisman you can carry.">
+                                <div class="pro-img arch-pro-img">
+                                    <img src="assets/CHEFCHAOUEN1.jpeg" alt="Evil Eye Clutch">
+                                    <div class="pro-blur-overlay"></div>
+                                    <span class="pro-card-tag">Fès</span>
+                                    <div class="pro-card-info">
+                                        <span class="pro-card-name">Evil Eye Clutch</span>
+                                    </div>
+                                    <button class="arch-bag-bar" onclick="addToCart('Evil Eye Clutch', '520 MAD', 'assets/CHEFCHAOUEN1.jpeg', this)">+ ADD TO BAG</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arch-card-footer">
+                        <h4 class="arch-product-title">Evil Eye Clutch</h4>
+                        <span class="arch-product-price">520 MAD</span>
+                        <div class="arch-city-badge">
+                            <span class="arch-city-diamond" style="color:#C5A059">◆</span>
+                            <span class="arch-city-name">Fès</span>
+                            <span class="arch-city-sep">·</span>
+                            <span class="arch-city-subtitle">The Spiritual Capital</span>
+                        </div>
+                        <button class="btn-wishlist arch-footer-wishlist" data-id="evil_eye_clutch" title="Wishlist">
+                            <i class="ph ph-heart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4 — Tetouan -->
+                <div class="moroccan-card-wrap" data-city="tetouan">
+                    <div class="arch-door">
+                        <div class="arch-door-border"></div>
+                        <div class="arch-door-inner">
+                            <div class="pro-card arch-pro-card" data-name="Dove Shoulder Bag" data-price="390"
+                                data-image="assets/TETOUAN.jpeg"
+                                data-description="Elegant cream crochet shoulder bag with hand-embroidered dove motif in black outline. Structured silhouette with woven handles. Symbol of peace and freedom from our Tetouan collection.">
+                                <div class="pro-img arch-pro-img">
+                                    <img src="assets/TETOUAN.jpeg" alt="Dove Shoulder Bag">
+                                    <div class="pro-blur-overlay"></div>
+                                    <span class="pro-card-tag">Tetouan</span>
+                                    <div class="pro-card-info">
+                                        <span class="pro-card-name">Dove Shoulder Bag</span>
+                                    </div>
+                                    <button class="arch-bag-bar" onclick="addToCart('Dove Shoulder Bag', '390 MAD', 'assets/TETOUAN.jpeg', this)">+ ADD TO BAG</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arch-card-footer">
+                        <h4 class="arch-product-title">Dove Shoulder Bag</h4>
+                        <span class="arch-product-price">390 MAD</span>
+                        <div class="arch-city-badge">
+                            <span class="arch-city-diamond" style="color:#90A4AE">◆</span>
+                            <span class="arch-city-name">Tetouan</span>
+                            <span class="arch-city-sep">·</span>
+                            <span class="arch-city-subtitle">The White Dove</span>
+                        </div>
+                        <button class="btn-wishlist arch-footer-wishlist" data-id="dove_shoulder_bag" title="Wishlist">
+                            <i class="ph ph-heart"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── SECTION FOOTER ─────────────────────────────────────── -->
+        <div class="moroccan-section-footer">
+            <div class="moroccan-stats-bar">
+                <span>5 Regions</span>
+                <span class="mstats-dot">·</span>
+                <span>15+ Master Artisans</span>
+                <span class="mstats-dot">·</span>
+                <span>100% Moroccan Yarn</span>
+                <span class="mstats-dot">·</span>
+                <span>Handmade Since 2023</span>
+            </div>
+            <div class="moroccan-flag-line"></div>
+        </div>
+
+    </section>
+
+    <!-- === LUXURY YARN VIDEO PARALLAX START === -->
+    <section class="lpv-section" id="lpvSection">
+        <div class="lpv-wrapper" id="lpvWrapper">
+            <video
+                class="lpv-video"
+                id="lpvVideo"
+                src="Luxury_Yarn_Animation_For_Website_Hero.mp4"
+                muted
+                loop
+                playsinline
+                preload="metadata"
+            ></video>
+        </div>
+    </section>
+    <!-- === LUXURY YARN VIDEO PARALLAX END === -->
+
     <!-- CLOTHES -->
     <section id="clothes" class="section bg-light">
         <div class="container">
-            <div class="section-head"><h2>Ready to Wear</h2></div>
+            <div class="section-head">
+                <h2>Ready to Wear</h2>
+            </div>
             <div class="grid-4-strict">
-                <div class="pro-card" data-name="Pink Cardigan" data-price="450" data-img="assets/cat-clothes.jpg" data-desc="Soft merino wool cardigan with delicate crochet details. Made by hand in Tanger.">
+                <div class="pro-card" data-name="Lace Knit Set" data-price="320" data-image="assets/cat-clothes.jpg"
+                    data-description="Handcrafted layered knitwear in warm neutral and cream tones. Open lace pattern with delicate tassel details. Premium wool blend, relaxed oversized fit. A timeless artisan piece from our Tanger atelier.">
                     <div class="pro-img">
-                        <button class="btn-wishlist" data-id="pink_cardigan" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
-                        <button class="btn-quickview" data-name="Pink Cardigan" data-price="450" data-img="assets/cat-clothes.jpg" data-desc="Soft merino wool cardigan with delicate crochet details. Made by hand in Tanger." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
-                        <img src="assets/cat-clothes.jpg" alt="Pink Cardigan">
+                        <button class="btn-wishlist" data-id="lace_knit_set" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Lace Knit Set" data-price="320"
+                            data-image="assets/cat-clothes.jpg"
+                            data-description="Handcrafted layered knitwear in warm neutral and cream tones. Open lace pattern with delicate tassel details. Premium wool blend, relaxed oversized fit. A timeless artisan piece from our Tanger atelier."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-clothes.jpg" alt="Lace Knit Set">
                         <div class="pro-blur-overlay"></div>
                         <span class="pro-card-tag">Handmade</span>
                         <div class="pro-card-info">
-                            <span class="pro-card-name">Pink Cardigan</span>
-                            <button class="btn-liquid-gold" onclick="addToCart('Pink Cardigan', '450 MAD', 'assets/cat-clothes.jpg', this)">
+                            <span class="pro-card-name">Lace Knit Set</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Lace Knit Set', '320 MAD', 'assets/cat-clothes.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">320 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Lace Knit Set</h4>
+                </div>
+                <div class="pro-card" data-name="Grey Cable Cardigan" data-price="280" data-image="assets/cat-clothes2.jpg"
+                    data-description="Classic gray button-up knit cardigan with cable stitch detail along the front panels. Chocolate brown buttons, long sleeves, fitted silhouette. Timeless wardrobe essential handcrafted in our Tanger atelier.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="grey_cable_cardigan" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Grey Cable Cardigan" data-price="280"
+                            data-image="assets/cat-clothes2.jpg"
+                            data-description="Classic gray button-up knit cardigan with cable stitch detail along the front panels. Chocolate brown buttons, long sleeves, fitted silhouette. Timeless wardrobe essential handcrafted in our Tanger atelier."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-clothes2.jpg" alt="Grey Cable Cardigan">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Grey Cable Cardigan</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Grey Cable Cardigan', '280 MAD', 'assets/cat-clothes2.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">280 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Grey Cable Cardigan</h4>
+                </div>
+                <div class="pro-card" data-name="Stacked Wool Collection" data-price="260" data-image="assets/cat-clothes3.jpg"
+                    data-description="Luxurious stacked knitwear in soft blush pink, warm rust and mustard tones. Multiple layered knit pieces with rich cable and bobble textures. Artisan-made with premium Moroccan wool.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="stacked_wool_collection" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Stacked Wool Collection" data-price="260"
+                            data-image="assets/cat-clothes3.jpg"
+                            data-description="Luxurious stacked knitwear in soft blush pink, warm rust and mustard tones. Multiple layered knit pieces with rich cable and bobble textures. Artisan-made with premium Moroccan wool."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-clothes3.jpg" alt="Stacked Wool Collection">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Stacked Wool Collection</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Stacked Wool Collection', '260 MAD', 'assets/cat-clothes3.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">260 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Stacked Wool Collection</h4>
+                </div>
+                <div class="pro-card" data-name="Mustard Crop Sweater" data-price="240" data-image="assets/cat-clothes4.jpg"
+                    data-description="Mustard yellow cropped knit sweater with ribbed hem and cuffs. Soft and warm premium wool blend. Relaxed cropped fit pairs perfectly with high-waist trousers or skirts. Handmade in our Tanger atelier.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="mustard_crop_sweater" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Mustard Crop Sweater" data-price="240"
+                            data-image="assets/cat-clothes4.jpg"
+                            data-description="Mustard yellow cropped knit sweater with ribbed hem and cuffs. Soft and warm premium wool blend. Relaxed cropped fit pairs perfectly with high-waist trousers or skirts. Handmade in our Tanger atelier."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-clothes4.jpg" alt="Mustard Crop Sweater">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Mustard Crop Sweater</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Mustard Crop Sweater', '240 MAD', 'assets/cat-clothes4.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">240 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Mustard Crop Sweater</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEN -->
+    <section id="men" class="section bg-light">
+        <div class="container">
+            <div class="section-head">
+                <h2>Men's Collection</h2>
+            </div>
+            <div class="grid-4-strict">
+                <div class="pro-card" data-name="Evil Eye Crochet Jacket" data-price="450" data-image="assets/cat-men.jpeg"
+                    data-description="Handcrafted white crochet jacket featuring iconic Moroccan evil eye motifs in cobalt blue and sky blue. Black velvet collar with embroidered flower details. Button-up front with black trim and cuffs. A true statement piece from our Tanger atelier.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="evil_eye_crochet_jacket" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Evil Eye Crochet Jacket" data-price="450"
+                            data-image="assets/cat-men.jpeg"
+                            data-description="Handcrafted white crochet jacket featuring iconic Moroccan evil eye motifs in cobalt blue and sky blue. Black velvet collar with embroidered flower details. Button-up front with black trim and cuffs. A true statement piece from our Tanger atelier."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-men.jpeg" alt="Evil Eye Crochet Jacket">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Evil Eye Crochet Jacket</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Evil Eye Crochet Jacket', '450 MAD', 'assets/cat-men.jpeg', this)">
                                 <span class="btn-txt">Add to bag</span>
                                 <span class="btn-price">450 MAD</span>
                                 <div class="btn-fill"></div>
@@ -298,64 +818,85 @@
                             </button>
                         </div>
                     </div>
-                    <h4>Pink Cardigan</h4>
+                    <h4>Evil Eye Crochet Jacket</h4>
                 </div>
-                <div class="pro-card" data-name="White Vest" data-price="300" data-img="assets/cat-clothes2.jpg" data-desc="Classic knit vest in pure cotton. Lightweight and effortlessly elegant.">
+                <div class="pro-card" data-name="Striped Crochet Shirt" data-price="380" data-image="assets/cat-men2.jpeg"
+                    data-description="Navy blue and white striped crochet short-sleeve shirt with button-up front. Bold vertical stripe pattern handwoven in premium cotton yarn. Relaxed fit perfect for warm Moroccan evenings.">
                     <div class="pro-img">
-                        <button class="btn-wishlist" data-id="white_vest" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
-                        <button class="btn-quickview" data-name="White Vest" data-price="300" data-img="assets/cat-clothes2.jpg" data-desc="Classic knit vest in pure cotton. Lightweight and effortlessly elegant." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
-                        <img src="assets/cat-clothes2.jpg" alt="White Vest">
+                        <button class="btn-wishlist" data-id="striped_crochet_shirt" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Striped Crochet Shirt" data-price="380"
+                            data-image="assets/cat-men2.jpeg"
+                            data-description="Navy blue and white striped crochet short-sleeve shirt with button-up front. Bold vertical stripe pattern handwoven in premium cotton yarn. Relaxed fit perfect for warm Moroccan evenings."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-men2.jpeg" alt="Striped Crochet Shirt">
                         <div class="pro-blur-overlay"></div>
                         <span class="pro-card-tag">Handmade</span>
                         <div class="pro-card-info">
-                            <span class="pro-card-name">White Vest</span>
-                            <button class="btn-liquid-gold" onclick="addToCart('White Vest', '300 MAD', 'assets/cat-clothes2.jpg', this)">
+                            <span class="pro-card-name">Striped Crochet Shirt</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Striped Crochet Shirt', '380 MAD', 'assets/cat-men2.jpeg', this)">
                                 <span class="btn-txt">Add to bag</span>
-                                <span class="btn-price">300 MAD</span>
+                                <span class="btn-price">380 MAD</span>
                                 <div class="btn-fill"></div>
                                 <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
                             </button>
                         </div>
                     </div>
-                    <h4>White Vest</h4>
+                    <h4>Striped Crochet Shirt</h4>
                 </div>
-                <div class="pro-card" data-name="Crop Top" data-price="200" data-img="assets/cat-clothes3.jpg" data-desc="Trendy crochet crop top with intricate flower patterns. A statement piece.">
+                <div class="pro-card" data-name="Checkered Bucket Hat" data-price="180" data-image="assets/cat-men3.jpeg"
+                    data-description="Black and white checkered crochet bucket hat. Classic granny square pattern reimagined as a modern streetwear essential. Handmade with soft cotton yarn, one size fits all.">
                     <div class="pro-img">
-                        <button class="btn-wishlist" data-id="crop_top" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
-                        <button class="btn-quickview" data-name="Crop Top" data-price="200" data-img="assets/cat-clothes3.jpg" data-desc="Trendy crochet crop top with intricate flower patterns. A statement piece." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
-                        <img src="assets/cat-clothes3.jpg" alt="Crop Top">
+                        <button class="btn-wishlist" data-id="checkered_bucket_hat" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Checkered Bucket Hat" data-price="180"
+                            data-image="assets/cat-men3.jpeg"
+                            data-description="Black and white checkered crochet bucket hat. Classic granny square pattern reimagined as a modern streetwear essential. Handmade with soft cotton yarn, one size fits all."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-men3.jpeg" alt="Checkered Bucket Hat">
                         <div class="pro-blur-overlay"></div>
                         <span class="pro-card-tag">Handmade</span>
                         <div class="pro-card-info">
-                            <span class="pro-card-name">Crop Top</span>
-                            <button class="btn-liquid-gold" onclick="addToCart('Crop Top', '200 MAD', 'assets/cat-clothes3.jpg', this)">
+                            <span class="pro-card-name">Checkered Bucket Hat</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Checkered Bucket Hat', '180 MAD', 'assets/cat-men3.jpeg', this)">
                                 <span class="btn-txt">Add to bag</span>
-                                <span class="btn-price">200 MAD</span>
+                                <span class="btn-price">180 MAD</span>
                                 <div class="btn-fill"></div>
                                 <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
                             </button>
                         </div>
                     </div>
-                    <h4>Crop Top</h4>
+                    <h4>Checkered Bucket Hat</h4>
                 </div>
-                <div class="pro-card" data-name="Wool Scarf" data-price="150" data-img="assets/cat-clothes4.jpg" data-desc="Luxuriously soft wool scarf in warm natural tones. Wrap yourself in warmth.">
+                <div class="pro-card" data-name="Granny Square Denim Jacket" data-price="520" data-image="assets/cat-men4.jpeg"
+                    data-description="Upcycled denim jacket adorned with handcrafted granny squares in cream, navy blue, and burnt orange. Each square individually crocheted and sewn by hand. A one-of-a-kind luxury piece from our Tanger atelier.">
                     <div class="pro-img">
-                        <button class="btn-wishlist" data-id="wool_scarf" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
-                        <button class="btn-quickview" data-name="Wool Scarf" data-price="150" data-img="assets/cat-clothes4.jpg" data-desc="Luxuriously soft wool scarf in warm natural tones. Wrap yourself in warmth." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
-                        <img src="assets/cat-clothes4.jpg" alt="Wool Scarf">
+                        <button class="btn-wishlist" data-id="granny_square_denim_jacket" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Granny Square Denim Jacket" data-price="520"
+                            data-image="assets/cat-men4.jpeg"
+                            data-description="Upcycled denim jacket adorned with handcrafted granny squares in cream, navy blue, and burnt orange. Each square individually crocheted and sewn by hand. A one-of-a-kind luxury piece from our Tanger atelier."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-men4.jpeg" alt="Granny Square Denim Jacket">
                         <div class="pro-blur-overlay"></div>
                         <span class="pro-card-tag">Handmade</span>
                         <div class="pro-card-info">
-                            <span class="pro-card-name">Wool Scarf</span>
-                            <button class="btn-liquid-gold" onclick="addToCart('Wool Scarf', '150 MAD', 'assets/cat-clothes4.jpg', this)">
+                            <span class="pro-card-name">Granny Square Denim Jacket</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Granny Square Denim Jacket', '520 MAD', 'assets/cat-men4.jpeg', this)">
                                 <span class="btn-txt">Add to bag</span>
-                                <span class="btn-price">150 MAD</span>
+                                <span class="btn-price">520 MAD</span>
                                 <div class="btn-fill"></div>
                                 <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
                             </button>
                         </div>
                     </div>
-                    <h4>Wool Scarf</h4>
+                    <h4>Granny Square Denim Jacket</h4>
                 </div>
             </div>
         </div>
@@ -364,75 +905,79 @@
     <!-- BAGS -->
     <section id="bags" class="section">
         <div class="container">
-            <div class="section-head"><h2>Handmade Bags</h2></div>
+            <div class="section-head">
+                <h2>Handmade Bags</h2>
+            </div>
             <div class="grid-4-strict">
-                <div class="pro-card" data-name="Flower Tote" data-price="250" data-img="assets/cat-bags.jpg" data-desc="Handwoven tote adorned with blooming crochet flowers. Unique and practical.">
+                <div class="pro-card" data-name="Pixel Art Tote" data-price="420" data-image="assets/cat-bags.jpg"
+                    data-description="Bold pixel art tote bag featuring a vibrant face mosaic in red, yellow, teal and black. Handcrafted tapestry crochet technique. Spacious interior, sturdy handles, true wearable art piece.">
                     <div class="pro-img">
-                        <button class="btn-wishlist" data-id="flower_tote" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
-                        <button class="btn-quickview" data-name="Flower Tote" data-price="250" data-img="assets/cat-bags.jpg" data-desc="Handwoven tote adorned with blooming crochet flowers. Unique and practical." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
-                        <img src="assets/cat-bags.jpg" alt="Flower Tote">
+                        <button class="btn-wishlist" data-id="pixel_art_tote" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Pixel Art Tote" data-price="420"
+                            data-image="assets/cat-bags.jpg"
+                            data-description="Bold pixel art tote bag featuring a vibrant face mosaic in red, yellow, teal and black. Handcrafted tapestry crochet technique. Spacious interior, sturdy handles, true wearable art piece."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-bags.jpg" alt="Pixel Art Tote">
                         <div class="pro-blur-overlay"></div>
                         <span class="pro-card-tag">Handmade</span>
                         <div class="pro-card-info">
-                            <span class="pro-card-name">Flower Tote</span>
-                            <button class="btn-liquid-gold" onclick="addToCart('Flower Tote', '250 MAD', 'assets/cat-bags.jpg', this)">
+                            <span class="pro-card-name">Pixel Art Tote</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Pixel Art Tote', '420 MAD', 'assets/cat-bags.jpg', this)">
                                 <span class="btn-txt">Add to bag</span>
-                                <span class="btn-price">250 MAD</span>
+                                <span class="btn-price">420 MAD</span>
                                 <div class="btn-fill"></div>
                                 <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
                             </button>
                         </div>
                     </div>
-                    <h4>Flower Tote</h4>
+                    <h4>Pixel Art Tote</h4>
                 </div>
-                <div class="pro-card" data-name="Mini Purse" data-price="180" data-img="assets/cat-bags2.jpg" data-desc="Compact crocheted purse with delicate gold clasp. Perfect for evenings.">
+                <div class="pro-card" data-name="Mini Bouclé Purse" data-price="280" data-image="assets/cat-bags2.jpg"
+                    data-description="Collection of chunky mini purses in soft bouclé yarn. Available in sage green, dusty pink, lavender, mustard and cream. Rounded silhouette with top handle. Perfect everyday companion.">
                     <div class="pro-img">
-                        <button class="btn-wishlist" data-id="mini_purse" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
-                        <button class="btn-quickview" data-name="Mini Purse" data-price="180" data-img="assets/cat-bags2.jpg" data-desc="Compact crocheted purse with delicate gold clasp. Perfect for evenings." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
-                        <img src="assets/cat-bags2.jpg" alt="Mini Purse">
+                        <button class="btn-wishlist" data-id="mini_boucle_purse" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Mini Bouclé Purse" data-price="280"
+                            data-image="assets/cat-bags2.jpg"
+                            data-description="Collection of chunky mini purses in soft bouclé yarn. Available in sage green, dusty pink, lavender, mustard and cream. Rounded silhouette with top handle. Perfect everyday companion."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-bags2.jpg" alt="Mini Bouclé Purse">
                         <div class="pro-blur-overlay"></div>
                         <span class="pro-card-tag">Handmade</span>
                         <div class="pro-card-info">
-                            <span class="pro-card-name">Mini Purse</span>
-                            <button class="btn-liquid-gold" onclick="addToCart('Mini Purse', '180 MAD', 'assets/cat-bags2.jpg', this)">
+                            <span class="pro-card-name">Mini Bouclé Purse</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Mini Bouclé Purse', '280 MAD', 'assets/cat-bags2.jpg', this)">
                                 <span class="btn-txt">Add to bag</span>
-                                <span class="btn-price">180 MAD</span>
+                                <span class="btn-price">280 MAD</span>
                                 <div class="btn-fill"></div>
                                 <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
                             </button>
                         </div>
                     </div>
-                    <h4>Mini Purse</h4>
+                    <h4>Mini Bouclé Purse</h4>
                 </div>
-                <div class="pro-card" data-name="Shoulder Bag" data-price="300" data-img="assets/cat-bag3.jpg" data-desc="Elegant shoulder bag crafted in fine Moroccan yarn. Timeless and refined.">
+                <div class="pro-card" data-name="Garden Shoulder Bag" data-price="350" data-image="assets/cat-bag3.jpg"
+                    data-description="White crochet tote with vibrant flower garden pattern in hot pink, coral and lime green. Spacious open top design with reinforced handles. Summer essential handmade in our Tanger atelier.">
                     <div class="pro-img">
-                        <button class="btn-wishlist" data-id="shoulder_bag" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
-                        <button class="btn-quickview" data-name="Shoulder Bag" data-price="300" data-img="assets/cat-bag3.jpg" data-desc="Elegant shoulder bag crafted in fine Moroccan yarn. Timeless and refined." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
-                        <img src="assets/cat-bag3.jpg" alt="Shoulder Bag">
+                        <button class="btn-wishlist" data-id="garden_shoulder_bag" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Garden Shoulder Bag" data-price="350"
+                            data-image="assets/cat-bag3.jpg"
+                            data-description="White crochet tote with vibrant flower garden pattern in hot pink, coral and lime green. Spacious open top design with reinforced handles. Summer essential handmade in our Tanger atelier."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-bag3.jpg" alt="Garden Shoulder Bag">
                         <div class="pro-blur-overlay"></div>
                         <span class="pro-card-tag">Handmade</span>
                         <div class="pro-card-info">
-                            <span class="pro-card-name">Shoulder Bag</span>
-                            <button class="btn-liquid-gold" onclick="addToCart('Shoulder Bag', '300 MAD', 'assets/cat-bag3.jpg', this)">
-                                <span class="btn-txt">Add to bag</span>
-                                <span class="btn-price">300 MAD</span>
-                                <div class="btn-fill"></div>
-                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
-                            </button>
-                        </div>
-                    </div>
-                    <h4>Shoulder Bag</h4>
-                </div>
-                <div class="pro-card" data-name="Beach Bag" data-price="350" data-img="assets/cat-bag4.jpg" data-desc="Spacious open-weave beach bag, handmade with love and Moroccan sunshine.">
-                    <div class="pro-img">
-                        <button class="btn-wishlist" data-id="beach_bag" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
-                        <button class="btn-quickview" data-name="Beach Bag" data-price="350" data-img="assets/cat-bag4.jpg" data-desc="Spacious open-weave beach bag, handmade with love and Moroccan sunshine." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
-                        <img src="assets/cat-bag4.jpg" alt="Beach Bag">
-                        <div class="pro-blur-overlay"></div>
-                        <span class="pro-card-tag">Handmade</span>
-                        <div class="pro-card-info">
-                            <span class="pro-card-name">Beach Bag</span>
-                            <button class="btn-liquid-gold" onclick="addToCart('Beach Bag', '350 MAD', 'assets/cat-bag4.jpg', this)">
+                            <span class="pro-card-name">Garden Shoulder Bag</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Garden Shoulder Bag', '350 MAD', 'assets/cat-bag3.jpg', this)">
                                 <span class="btn-txt">Add to bag</span>
                                 <span class="btn-price">350 MAD</span>
                                 <div class="btn-fill"></div>
@@ -440,7 +985,33 @@
                             </button>
                         </div>
                     </div>
-                    <h4>Beach Bag</h4>
+                    <h4>Garden Shoulder Bag</h4>
+                </div>
+                <div class="pro-card" data-name="Ocean Drawstring Bag" data-price="310" data-image="assets/cat-bag4.jpg"
+                    data-description="Dusty blue crochet drawstring backpack with burnt orange rope handles and drawstring closure. Textured bobble stitch body. Lightweight and roomy, perfect for beach days or city wandering.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="ocean_drawstring_bag" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Ocean Drawstring Bag" data-price="310"
+                            data-image="assets/cat-bag4.jpg"
+                            data-description="Dusty blue crochet drawstring backpack with burnt orange rope handles and drawstring closure. Textured bobble stitch body. Lightweight and roomy, perfect for beach days or city wandering."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-bag4.jpg" alt="Ocean Drawstring Bag">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Ocean Drawstring Bag</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Ocean Drawstring Bag', '310 MAD', 'assets/cat-bag4.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">310 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Ocean Drawstring Bag</h4>
                 </div>
             </div>
         </div>
@@ -449,37 +1020,27 @@
     <!-- BABY -->
     <section id="baby" class="section bg-light">
         <div class="container">
-            <div class="section-head"><h2>Little Ones</h2></div>
+            <div class="section-head">
+                <h2>Little Ones</h2>
+            </div>
             <div class="grid-4-strict">
-                <div class="pro-card" data-name="Baby Blanket" data-price="350" data-img="assets/cat-baby.jpg" data-desc="Incredibly soft merino baby blanket. Safe for newborns. A treasured gift.">
+                <div class="pro-card" data-name="Bear Beanie Set" data-price="120" data-image="assets/cat-baby.jpg"
+                    data-description="Adorable cream bear ear beanie with matching tiny booties set. Chunky knit in ultra-soft baby wool blend. The ears are gently stuffed for a sweet 3D effect. Perfect newborn gift set.">
                     <div class="pro-img">
-                        <button class="btn-wishlist" data-id="baby_blanket" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
-                        <button class="btn-quickview" data-name="Baby Blanket" data-price="350" data-img="assets/cat-baby.jpg" data-desc="Incredibly soft merino baby blanket. Safe for newborns. A treasured gift." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
-                        <img src="assets/cat-baby.jpg" alt="Baby Blanket">
+                        <button class="btn-wishlist" data-id="bear_beanie_set" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Bear Beanie Set" data-price="120"
+                            data-image="assets/cat-baby.jpg"
+                            data-description="Adorable cream bear ear beanie with matching tiny booties set. Chunky knit in ultra-soft baby wool blend. The ears are gently stuffed for a sweet 3D effect. Perfect newborn gift set."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-baby.jpg" alt="Bear Beanie Set">
                         <div class="pro-blur-overlay"></div>
                         <span class="pro-card-tag">Soft & Pure</span>
                         <div class="pro-card-info">
-                            <span class="pro-card-name">Baby Blanket</span>
-                            <button class="btn-liquid-gold" onclick="addToCart('Baby Blanket', '350 MAD', 'assets/cat-baby.jpg', this)">
-                                <span class="btn-txt">Add to bag</span>
-                                <span class="btn-price">350 MAD</span>
-                                <div class="btn-fill"></div>
-                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
-                            </button>
-                        </div>
-                    </div>
-                    <h4>Baby Blanket</h4>
-                </div>
-                <div class="pro-card" data-name="Cute Beanie" data-price="120" data-img="assets/cat-baby2.jpg" data-desc="Adorable knit beanie for little heads. Warm, cozy and full of charm.">
-                    <div class="pro-img">
-                        <button class="btn-wishlist" data-id="cute_beanie" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
-                        <button class="btn-quickview" data-name="Cute Beanie" data-price="120" data-img="assets/cat-baby2.jpg" data-desc="Adorable knit beanie for little heads. Warm, cozy and full of charm." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
-                        <img src="assets/cat-baby2.jpg" alt="Cute Beanie">
-                        <div class="pro-blur-overlay"></div>
-                        <span class="pro-card-tag">Little Ones</span>
-                        <div class="pro-card-info">
-                            <span class="pro-card-name">Cute Beanie</span>
-                            <button class="btn-liquid-gold" onclick="addToCart('Cute Beanie', '120 MAD', 'assets/cat-baby2.jpg', this)">
+                            <span class="pro-card-name">Bear Beanie Set</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Bear Beanie Set', '120 MAD', 'assets/cat-baby.jpg', this)">
                                 <span class="btn-txt">Add to bag</span>
                                 <span class="btn-price">120 MAD</span>
                                 <div class="btn-fill"></div>
@@ -487,37 +1048,51 @@
                             </button>
                         </div>
                     </div>
-                    <h4>Cute Beanie</h4>
+                    <h4>Bear Beanie Set</h4>
                 </div>
-                <div class="pro-card" data-name="Baby Booties" data-price="100" data-img="assets/cat-baby3.jpg" data-desc="Tiny handmade booties that keep little feet cozy. Made with purest love.">
+                <div class="pro-card" data-name="Amigurumi Frog" data-price="150" data-image="assets/cat-baby2.jpg"
+                    data-description="Handcrafted amigurumi frog toy in soft yellow cotton yarn. Safety eyes, stuffed with hypoallergenic filling. Comes with matching yarn ball and crochet accessories. Completely safe for newborns and toddlers.">
                     <div class="pro-img">
-                        <button class="btn-wishlist" data-id="baby_booties" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
-                        <button class="btn-quickview" data-name="Baby Booties" data-price="100" data-img="assets/cat-baby3.jpg" data-desc="Tiny handmade booties that keep little feet cozy. Made with purest love." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
-                        <img src="assets/cat-baby3.jpg" alt="Baby Booties">
+                        <button class="btn-wishlist" data-id="amigurumi_frog" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Amigurumi Frog" data-price="150"
+                            data-image="assets/cat-baby2.jpg"
+                            data-description="Handcrafted amigurumi frog toy in soft yellow cotton yarn. Safety eyes, stuffed with hypoallergenic filling. Comes with matching yarn ball and crochet accessories. Completely safe for newborns and toddlers."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-baby2.jpg" alt="Amigurumi Frog">
                         <div class="pro-blur-overlay"></div>
                         <span class="pro-card-tag">Little Ones</span>
                         <div class="pro-card-info">
-                            <span class="pro-card-name">Baby Booties</span>
-                            <button class="btn-liquid-gold" onclick="addToCart('Baby Booties', '100 MAD', 'assets/cat-baby3.jpg', this)">
+                            <span class="pro-card-name">Amigurumi Frog</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Amigurumi Frog', '150 MAD', 'assets/cat-baby2.jpg', this)">
                                 <span class="btn-txt">Add to bag</span>
-                                <span class="btn-price">100 MAD</span>
+                                <span class="btn-price">150 MAD</span>
                                 <div class="btn-fill"></div>
                                 <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
                             </button>
                         </div>
                     </div>
-                    <h4>Baby Booties</h4>
+                    <h4>Amigurumi Frog</h4>
                 </div>
-                <div class="pro-card" data-name="Amigurumi Toy" data-price="200" data-img="assets/cat-baby4.jpg" data-desc="Handcrafted crochet stuffed toy. Completely child-safe and one-of-a-kind.">
+                <div class="pro-card" data-name="Baby Dress" data-price="200" data-image="assets/cat-baby3.jpg"
+                    data-description="Mustard yellow crochet baby dress with delicate bobble texture and single button at the neckline. Short sleeves, A-line silhouette. Handcrafted in soft mercerized cotton. Available in sizes 0-3 months to 12 months.">
                     <div class="pro-img">
-                        <button class="btn-wishlist" data-id="amigurumi_toy" aria-label="Add to wishlist" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
-                        <button class="btn-quickview" data-name="Amigurumi Toy" data-price="200" data-img="assets/cat-baby4.jpg" data-desc="Handcrafted crochet stuffed toy. Completely child-safe and one-of-a-kind." aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View Details</span></button>
-                        <img src="assets/cat-baby4.jpg" alt="Amigurumi Toy">
+                        <button class="btn-wishlist" data-id="baby_dress" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Baby Dress" data-price="200"
+                            data-image="assets/cat-baby3.jpg"
+                            data-description="Mustard yellow crochet baby dress with delicate bobble texture and single button at the neckline. Short sleeves, A-line silhouette. Handcrafted in soft mercerized cotton. Available in sizes 0-3 months to 12 months."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-baby3.jpg" alt="Baby Dress">
                         <div class="pro-blur-overlay"></div>
-                        <span class="pro-card-tag">Handmade</span>
+                        <span class="pro-card-tag">Little Ones</span>
                         <div class="pro-card-info">
-                            <span class="pro-card-name">Amigurumi Toy</span>
-                            <button class="btn-liquid-gold" onclick="addToCart('Amigurumi Toy', '200 MAD', 'assets/cat-baby4.jpg', this)">
+                            <span class="pro-card-name">Baby Dress</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Baby Dress', '200 MAD', 'assets/cat-baby3.jpg', this)">
                                 <span class="btn-txt">Add to bag</span>
                                 <span class="btn-price">200 MAD</span>
                                 <div class="btn-fill"></div>
@@ -525,7 +1100,33 @@
                             </button>
                         </div>
                     </div>
-                    <h4>Amigurumi Toy</h4>
+                    <h4>Baby Dress</h4>
+                </div>
+                <div class="pro-card" data-name="Newborn Blanket" data-price="250" data-image="assets/cat-baby4.jpg"
+                    data-description="Ultra-soft chunky knit newborn blanket in warm cream and gray tones. Large bobble stitch pattern, generous size. Made from premium hypoallergenic baby wool. The perfect cocoon for your little one.">
+                    <div class="pro-img">
+                        <button class="btn-wishlist" data-id="newborn_blanket" aria-label="Add to wishlist"
+                            title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+                        <button class="btn-quickview" data-name="Newborn Blanket" data-price="250"
+                            data-image="assets/cat-baby4.jpg"
+                            data-description="Ultra-soft chunky knit newborn blanket in warm cream and gray tones. Large bobble stitch pattern, generous size. Made from premium hypoallergenic baby wool. The perfect cocoon for your little one."
+                            aria-label="Quick view" title="Quick View"><i class="ph ph-eye"></i><span>View
+                                Details</span></button>
+                        <img src="assets/cat-baby4.jpg" alt="Newborn Blanket">
+                        <div class="pro-blur-overlay"></div>
+                        <span class="pro-card-tag">Handmade</span>
+                        <div class="pro-card-info">
+                            <span class="pro-card-name">Newborn Blanket</span>
+                            <button class="btn-liquid-gold"
+                                onclick="addToCart('Newborn Blanket', '250 MAD', 'assets/cat-baby4.jpg', this)">
+                                <span class="btn-txt">Add to bag</span>
+                                <span class="btn-price">250 MAD</span>
+                                <div class="btn-fill"></div>
+                                <div class="btn-icon-done"><i class="ph-fill ph-check"></i></div>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Newborn Blanket</h4>
                 </div>
             </div>
         </div>
@@ -570,7 +1171,8 @@
                         <span class="vip-badge-label">How It Works</span>
                         <span class="vip-badge-dot"></span>
                     </div>
-                    <p>Collaborate one-on-one with our master artisans. Every stitch, color, and detail — crafted exclusively for you.</p>
+                    <p>Collaborate one-on-one with our master artisans. Every stitch, color, and detail — crafted
+                        exclusively for you.</p>
                 </div>
 
                 <div class="vip-quote-divider">
@@ -626,7 +1228,6 @@
             <div class="vip-form-container">
                 <div class="vip-corner-tl"></div>
                 <div class="vip-corner-br"></div>
-
                 <div id="vipFormWrapper">
                     <div class="vip-form-head">
                         <div class="vip-form-head-tag">
@@ -675,22 +1276,39 @@
                                 <span class="vip-color-selected" id="vipColorSelected">Select colors</span>
                             </div>
                             <div class="vip-swatches" id="vipSwatches">
-                                <button type="button" class="vip-swatch" data-color="Rose Poudré"     style="background:#F2A8BE;" title="Rose Poudré"></button>
-                                <button type="button" class="vip-swatch" data-color="Blush"           style="background:#F7C5D5;" title="Blush"></button>
-                                <button type="button" class="vip-swatch" data-color="Cerise"          style="background:#D46A85;" title="Cerise"></button>
-                                <button type="button" class="vip-swatch" data-color="Bordeaux"        style="background:#7B2340;" title="Bordeaux"></button>
-                                <button type="button" class="vip-swatch" data-color="Ivoire"          style="background:#F5F0E8;" title="Ivoire"></button>
-                                <button type="button" class="vip-swatch" data-color="Crème"           style="background:#EDE0C4;" title="Crème"></button>
-                                <button type="button" class="vip-swatch" data-color="Or"              style="background:#C5A059;" title="Or"></button>
-                                <button type="button" class="vip-swatch" data-color="Caramel"         style="background:#C08040;" title="Caramel"></button>
-                                <button type="button" class="vip-swatch" data-color="Terracotta"      style="background:#C1603A;" title="Terracotta"></button>
-                                <button type="button" class="vip-swatch" data-color="Sable"           style="background:#B5956A;" title="Sable"></button>
-                                <button type="button" class="vip-swatch" data-color="Vert Sauge"      style="background:#8BA888;" title="Vert Sauge"></button>
-                                <button type="button" class="vip-swatch" data-color="Bleu Nuit"       style="background:#2D3A5E;" title="Bleu Nuit"></button>
-                                <button type="button" class="vip-swatch" data-color="Gris Perle"      style="background:#B8B8C0;" title="Gris Perle"></button>
-                                <button type="button" class="vip-swatch" data-color="Anthracite"      style="background:#3A3A3A;" title="Anthracite"></button>
-                                <button type="button" class="vip-swatch" data-color="Blanc"           style="background:#F8F8F8; border:1px solid rgba(255,255,255,0.15);" title="Blanc"></button>
-                                <button type="button" class="vip-swatch" data-color="Noir"            style="background:#111111;" title="Noir"></button>
+                                <button type="button" class="vip-swatch" data-color="Rose Poudré"
+                                    style="background:#F2A8BE;" title="Rose Poudré"></button>
+                                <button type="button" class="vip-swatch" data-color="Blush" style="background:#F7C5D5;"
+                                    title="Blush"></button>
+                                <button type="button" class="vip-swatch" data-color="Cerise" style="background:#D46A85;"
+                                    title="Cerise"></button>
+                                <button type="button" class="vip-swatch" data-color="Bordeaux"
+                                    style="background:#7B2340;" title="Bordeaux"></button>
+                                <button type="button" class="vip-swatch" data-color="Ivoire" style="background:#F5F0E8;"
+                                    title="Ivoire"></button>
+                                <button type="button" class="vip-swatch" data-color="Crème" style="background:#EDE0C4;"
+                                    title="Crème"></button>
+                                <button type="button" class="vip-swatch" data-color="Or" style="background:#C5A059;"
+                                    title="Or"></button>
+                                <button type="button" class="vip-swatch" data-color="Caramel"
+                                    style="background:#C08040;" title="Caramel"></button>
+                                <button type="button" class="vip-swatch" data-color="Terracotta"
+                                    style="background:#C1603A;" title="Terracotta"></button>
+                                <button type="button" class="vip-swatch" data-color="Sable" style="background:#B5956A;"
+                                    title="Sable"></button>
+                                <button type="button" class="vip-swatch" data-color="Vert Sauge"
+                                    style="background:#8BA888;" title="Vert Sauge"></button>
+                                <button type="button" class="vip-swatch" data-color="Bleu Nuit"
+                                    style="background:#2D3A5E;" title="Bleu Nuit"></button>
+                                <button type="button" class="vip-swatch" data-color="Gris Perle"
+                                    style="background:#B8B8C0;" title="Gris Perle"></button>
+                                <button type="button" class="vip-swatch" data-color="Anthracite"
+                                    style="background:#3A3A3A;" title="Anthracite"></button>
+                                <button type="button" class="vip-swatch" data-color="Blanc"
+                                    style="background:#F8F8F8; border:1px solid rgba(255,255,255,0.15);"
+                                    title="Blanc"></button>
+                                <button type="button" class="vip-swatch" data-color="Noir" style="background:#111111;"
+                                    title="Noir"></button>
                             </div>
                             <input type="hidden" name="colorChoice" id="vipColorInput">
                         </div>
@@ -726,171 +1344,219 @@
         </div>
     </section>
 
-    <!-- TEAM -->
-    <section id="team" class="section bg-light">
-        <div class="container">
-            <div class="section-head"><h2>The Members</h2></div>
-
-            <div class="artisan-grid">
-
-                <!-- Card 1 -->
-                <div class="artisan-card" data-index="01">
-                    <div class="artisan-img-wrap">
-                        <img src="assets/OUMNIAAA.png" alt="Oumnia" class="artisan-photo">
-                        <div class="artisan-img-grain"></div>
-                        <!-- Hover reveal layer -->
-                        <div class="artisan-reveal">
-                            <div class="artisan-reveal-inner">
-                                <span class="artisan-reveal-num">01</span>
-                                <div class="artisan-reveal-socials">
-                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-instagram-logo"></i></a>
-                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-linkedin-logo"></i></a>
-                                </div>
-                                <p class="artisan-reveal-quote">Passion for every stitch</p>
-                            </div>
-                        </div>
-                        <!-- Gold corner accent -->
-                        <div class="artisan-corner-tl"></div>
-                        <div class="artisan-corner-br"></div>
-                    </div>
-                    <div class="artisan-info">
-                        <div class="artisan-info-left">
-                            <span class="artisan-role">Ciel Stagiaire</span>
-                            <h4 class="artisan-name">Oumnia</h4>
-                        </div>
-                        <div class="artisan-info-right">
-                            <div class="artisan-dot-ring">
-                                <i class="ph ph-arrow-up-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Animated bottom line -->
-                    <div class="artisan-line"></div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="artisan-card" data-index="02">
-                    <div class="artisan-img-wrap">
-                        <img src="assets/Salmaaa.png" alt="Salma" class="artisan-photo">
-                        <div class="artisan-img-grain"></div>
-                        <div class="artisan-reveal">
-                            <div class="artisan-reveal-inner">
-                                <span class="artisan-reveal-num">02</span>
-                                <div class="artisan-reveal-socials">
-                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-instagram-logo"></i></a>
-                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-linkedin-logo"></i></a>
-                                </div>
-                                <p class="artisan-reveal-quote">Knitting dreams into reality</p>
-                            </div>
-                        </div>
-                        <div class="artisan-corner-tl"></div>
-                        <div class="artisan-corner-br"></div>
-                    </div>
-                    <div class="artisan-info">
-                        <div class="artisan-info-left">
-                            <span class="artisan-role">Ciel Stagiaire</span>
-                            <h4 class="artisan-name">Salma</h4>
-                        </div>
-                        <div class="artisan-info-right">
-                            <div class="artisan-dot-ring">
-                                <i class="ph ph-arrow-up-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="artisan-line"></div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="artisan-card" data-index="03">
-                    <div class="artisan-img-wrap">
-                        <img src="assets/HAJARR.png" alt="Hajar" class="artisan-photo">
-                        <div class="artisan-img-grain"></div>
-                        <div class="artisan-reveal">
-                            <div class="artisan-reveal-inner">
-                                <span class="artisan-reveal-num">03</span>
-                                <div class="artisan-reveal-socials">
-                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-instagram-logo"></i></a>
-                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-linkedin-logo"></i></a>
-                                </div>
-                                <p class="artisan-reveal-quote">Loves design</p>
-                            </div>
-                        </div>
-                        <div class="artisan-corner-tl"></div>
-                        <div class="artisan-corner-br"></div>
-                    </div>
-                    <div class="artisan-info">
-                        <div class="artisan-info-left">
-                            <span class="artisan-role">Ciel Stagiaire</span>
-                            <h4 class="artisan-name">Hajar</h4>
-                        </div>
-                        <div class="artisan-info-right">
-                            <div class="artisan-dot-ring">
-                                <i class="ph ph-arrow-up-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="artisan-line"></div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="artisan-card" data-index="04">
-                    <div class="artisan-img-wrap">
-                        <img src="assets/NOUHAILAA.png" alt="Nouhaila" class="artisan-photo">
-                        <div class="artisan-img-grain"></div>
-                        <div class="artisan-reveal">
-                            <div class="artisan-reveal-inner">
-                                <span class="artisan-reveal-num">04</span>
-                                <div class="artisan-reveal-socials">
-                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-instagram-logo"></i></a>
-                                    <a href="#" class="artisan-social-btn"><i class="ph-bold ph-linkedin-logo"></i></a>
-                                </div>
-                                <p class="artisan-reveal-quote">Perfection in every detail</p>
-                            </div>
-                        </div>
-                        <div class="artisan-corner-tl"></div>
-                        <div class="artisan-corner-br"></div>
-                    </div>
-                    <div class="artisan-info">
-                        <div class="artisan-info-left">
-                            <span class="artisan-role">Ciel Stagiaire</span>
-                            <h4 class="artisan-name">Nouhaila</h4>
-                        </div>
-                        <div class="artisan-info-right">
-                            <div class="artisan-dot-ring">
-                                <i class="ph ph-arrow-up-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="artisan-line"></div>
-                </div>
-
-            </div>
-            <div class="dev-signature-area">
-                <div class="dev-signature-inner">
-                    <div class="dev-signature-left">
-                        <div class="dev-avatar"><i class="ph-fill ph-code"></i></div>
-                        <div class="dev-text-group">
-                            <span class="dev-label">Digital Architecture</span>
-                            <h3 class="dev-name-script">Ayman Lekhal</h3>
-                            <span class="dev-alias">Web Developer</span>
-                        </div>
-                    </div>
-                    <div class="dev-signature-right">
-                        <div class="dev-right-text">
-                            <span class="dev-right-heading">Built by</span>
-                            <div class="dev-right-desc">Crafted with<br>Code &amp; Passion</div>
-                            <p class="dev-right-sub">Every pixel, every animation, every interaction — designed and developed to bring Yarny's luxury vision to life on the web.</p>
-                        </div>
-                        <div class="dev-tech-stack">
-                            <span class="dev-tech-badge">HTML &amp; CSS</span>
-                            <span class="dev-tech-badge">Vanilla JS</span>
-                            <span class="dev-tech-badge">GSAP</span>
-                            <span class="dev-tech-badge">Lenis</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- === VIDEO SOURCE REPLACE === -->
+    <!-- KNITTING VIDEO SECTION -->
+    <section id="kvSection" class="kv-section">
+        <div class="kv-wrapper" id="kvWrapper">
+            <video
+                id="kvVideo"
+                class="kv-video"
+                src="Knitting_Video_Generation.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+                preload="auto"
+            ></video>
+            <div class="kv-overlay"></div>
         </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team">
+
+      <div class="team-header">
+
+        <div class="showcase-marquee-bar">
+          <div class="showcase-marquee-track">
+            <span>OUMNIA</span>
+            <span class="smq-dot">◆</span>
+            <span>SALMA</span>
+            <span class="smq-dot">◆</span>
+            <span>HAJAR</span>
+            <span class="smq-dot">◆</span>
+            <span>NOUHAILA</span>
+            <span class="smq-dot">◆</span>
+            <span>CIEL STAGIAIRE</span>
+            <span class="smq-dot">◆</span>
+            <span>YARNY ATELIER</span>
+            <span class="smq-dot">◆</span>
+            <span>TANGER · MAROC</span>
+            <span class="smq-dot">◆</span>
+            <span>OUMNIA</span>
+            <span class="smq-dot">◆</span>
+            <span>SALMA</span>
+            <span class="smq-dot">◆</span>
+            <span>HAJAR</span>
+            <span class="smq-dot">◆</span>
+            <span>NOUHAILA</span>
+            <span class="smq-dot">◆</span>
+            <span>CIEL STAGIAIRE</span>
+            <span class="smq-dot">◆</span>
+            <span>YARNY ATELIER</span>
+            <span class="smq-dot">◆</span>
+            <span>TANGER · MAROC</span>
+            <span class="smq-dot">◆</span>
+          </div>
+        </div>
+
+        <div class="showcase-header-center">
+          <span class="showcase-eyebrow">✦ THE HEART OF YARNY ✦</span>
+          <h2 class="showcase-main-title team-main-title">
+            <span class="title-word-our">The</span>
+            <span class="title-word-collections"> Members</span>
+          </h2>
+          <p class="showcase-subtitle">The artisan hands behind every stitch</p>
+          <div class="showcase-deco">
+            <span class="showcase-deco-line showcase-deco-line-left"></span>
+            <span class="showcase-deco-diamond">◆</span>
+            <span class="showcase-deco-line showcase-deco-line-right"></span>
+          </div>
+        </div>
+
+        <div class="showcase-marquee-bar showcase-marquee-bar--reverse">
+          <div class="showcase-marquee-track showcase-marquee-track--reverse">
+            <span>HANDCRAFTED</span>
+            <span class="smq-dot">◆</span>
+            <span>PURE PASSION</span>
+            <span class="smq-dot">◆</span>
+            <span>ARTISAN MADE</span>
+            <span class="smq-dot">◆</span>
+            <span>MOROCCAN HERITAGE</span>
+            <span class="smq-dot">◆</span>
+            <span>PURE WOOL</span>
+            <span class="smq-dot">◆</span>
+            <span>ATELIER YARNY</span>
+            <span class="smq-dot">◆</span>
+            <span>HANDCRAFTED</span>
+            <span class="smq-dot">◆</span>
+            <span>PURE PASSION</span>
+            <span class="smq-dot">◆</span>
+            <span>ARTISAN MADE</span>
+            <span class="smq-dot">◆</span>
+            <span>MOROCCAN HERITAGE</span>
+            <span class="smq-dot">◆</span>
+            <span>PURE WOOL</span>
+            <span class="smq-dot">◆</span>
+            <span>ATELIER YARNY</span>
+            <span class="smq-dot">◆</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="team-grid">
+
+        <div class="team-card" data-index="0">
+          <div class="team-card-image">
+            <span class="team-bg-name">Oumnia</span>
+            <img src="assets/OUMNIAAA.png" alt="Oumnia">
+            <div class="team-card-overlay"></div>
+            <h3 class="team-card-name">Oumnia</h3>
+          </div>
+        </div>
+
+        <div class="team-card" data-index="1">
+          <div class="team-card-image">
+            <span class="team-bg-name">Salma</span>
+            <img src="assets/Salmaaa.png" alt="Salma">
+            <div class="team-card-overlay"></div>
+            <h3 class="team-card-name">Salma</h3>
+          </div>
+        </div>
+
+        <div class="team-card" data-index="2">
+          <div class="team-card-image">
+            <span class="team-bg-name">Hajar</span>
+            <img src="assets/HAJARR.png" alt="Hajar">
+            <div class="team-card-overlay"></div>
+            <h3 class="team-card-name">Hajar</h3>
+          </div>
+        </div>
+
+        <div class="team-card" data-index="3">
+          <div class="team-card-image">
+            <span class="team-bg-name">Nouhaila</span>
+            <img src="assets/NOUHAILAA.png" alt="Nouhaila">
+            <div class="team-card-overlay"></div>
+            <h3 class="team-card-name">Nouhaila</h3>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Developer Signature -->
+    <section id="dev-signature">
+
+      <div class="dev-bg-image"></div>
+      <div class="dev-overlay"></div>
+
+      <div class="dev-services-bar">
+        <div class="dev-services-track">
+          <span>WEB DEVELOPMENT</span><span class="dev-dot">•</span>
+          <span>UI / UX DESIGN</span><span class="dev-dot">•</span>
+          <span>GSAP ANIMATION</span><span class="dev-dot">•</span>
+          <span>CREATIVE DIRECTION</span><span class="dev-dot">•</span>
+          <span>E-COMMERCE BUILDS</span><span class="dev-dot">•</span>
+          <span>VANILLA JAVASCRIPT</span><span class="dev-dot">•</span>
+          <span>WEB DEVELOPMENT</span><span class="dev-dot">•</span>
+          <span>UI / UX DESIGN</span><span class="dev-dot">•</span>
+          <span>GSAP ANIMATION</span><span class="dev-dot">•</span>
+          <span>CREATIVE DIRECTION</span><span class="dev-dot">•</span>
+          <span>E-COMMERCE BUILDS</span><span class="dev-dot">•</span>
+          <span>VANILLA JAVASCRIPT</span><span class="dev-dot">•</span>
+        </div>
+      </div>
+
+      <div class="dev-content">
+
+        <div class="dev-name-block">
+          <p class="dev-label">BUILT BY</p>
+          <h2 class="dev-name">Ayman<br>Lekhal</h2>
+          <p class="dev-sublabel">Web Developer &amp; Creative Technologist</p>
+        </div>
+
+        <div class="dev-tagline-block">
+          <p class="dev-tagline-line1">Code that speaks.</p>
+          <p class="dev-tagline-line2">Interfaces that convert.</p>
+        </div>
+
+        <div class="dev-giant-word" aria-hidden="true">CREATIVE</div>
+
+        <div class="dev-bio">
+          <p>Between logic and aesthetics lies the code I write. Every
+          animation, every interaction, every pixel of YARNY — engineered
+          with precision, crafted with passion.</p>
+        </div>
+
+        <div class="dev-stack">
+          <span>HTML &amp; CSS</span>
+          <span>VANILLA JS</span>
+          <span>GSAP</span>
+          <span>LENIS</span>
+        </div>
+
+        <div class="dev-socials">
+          <a href="#" class="dev-social-link">
+            <span class="dev-social-icon">in</span> LinkedIn
+          </a>
+          <a href="#" class="dev-social-link">
+            <span class="dev-social-icon">gh</span> GitHub
+          </a>
+        </div>
+
+        <div class="dev-role-block">
+          <p class="dev-role">WEB DEVELOPER</p>
+        </div>
+
+      </div>
+
+      <div class="dev-photo-container">
+        <img src="assets/ayman.png" alt="Ayman Lekhal" class="dev-photo">
+      </div>
+
     </section>
 
 
@@ -930,7 +1596,9 @@
                             </div>
                         </div>
                         <div class="review-stars">
-                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i>
                         </div>
                     </div>
                 </div>
@@ -947,14 +1615,17 @@
                             </div>
                         </div>
                         <div class="review-stars">
-                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i>
                         </div>
                     </div>
                 </div>
 
                 <div class="review-card">
                     <span class="review-quote-icon">"</span>
-                    <p class="review-text">Tbarklah , wsltni la commande durant 24 h , w tesdemt m quality dyal product it was incredible !!!</p>
+                    <p class="review-text">Tbarklah , wsltni la commande durant 24 h , w tesdemt m quality dyal product
+                        it was incredible !!!</p>
                     <div class="review-footer">
                         <div class="review-author">
                             <div class="review-avatar">S</div>
@@ -964,7 +1635,9 @@
                             </div>
                         </div>
                         <div class="review-stars">
-                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i>
                         </div>
                     </div>
                 </div>
@@ -981,14 +1654,17 @@
                             </div>
                         </div>
                         <div class="review-stars">
-                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i>
                         </div>
                     </div>
                 </div>
 
                 <div class="review-card">
                     <span class="review-quote-icon">"</span>
-                    <p class="review-text">Papapapa , design wa3er,(hada li 3ml deesign ystahl chi 7ajja w chi BMW M4 competition)</p>
+                    <p class="review-text">Papapapa , design wa3er,(hada li 3ml deesign ystahl chi 7ajja w chi BMW M4
+                        competition)</p>
                     <div class="review-footer">
                         <div class="review-author">
                             <div class="review-avatar">A</div>
@@ -998,7 +1674,9 @@
                             </div>
                         </div>
                         <div class="review-stars">
-                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i>
                         </div>
                     </div>
                 </div>
@@ -1006,7 +1684,8 @@
                 <!-- Set 2 (duplicate for seamless loop) -->
                 <div class="review-card">
                     <span class="review-quote-icon">"</span>
-                    <p class="review-text">Awl haja andk tnsawha hiya Analyse swot w pestel  ra hado kayl3bo dawr kbiiiir f naja7 dyal projet dyalkom mab9atchi ghir f products </p>
+                    <p class="review-text">Awl haja andk tnsawha hiya Analyse swot w pestel ra hado kayl3bo dawr kbiiiir
+                        f naja7 dyal projet dyalkom mab9atchi ghir f products </p>
                     <div class="review-footer">
                         <div class="review-author">
                             <div class="review-avatar">T</div>
@@ -1016,7 +1695,9 @@
                             </div>
                         </div>
                         <div class="review-stars">
-                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i>
                         </div>
                     </div>
                 </div>
@@ -1033,7 +1714,9 @@
                             </div>
                         </div>
                         <div class="review-stars">
-                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i>
                         </div>
                     </div>
                 </div>
@@ -1050,7 +1733,9 @@
                             </div>
                         </div>
                         <div class="review-stars">
-                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i>
                         </div>
                     </div>
                 </div>
@@ -1067,7 +1752,9 @@
                             </div>
                         </div>
                         <div class="review-stars">
-                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i>
                         </div>
                     </div>
                 </div>
@@ -1084,7 +1771,9 @@
                             </div>
                         </div>
                         <div class="review-stars">
-                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i>
                         </div>
                     </div>
                 </div>
@@ -1098,7 +1787,8 @@
             <div class="contact-left">
                 <span class="contact-eyebrow">Get in Touch</span>
                 <h2>Let's Create<br>Something<br>Beautiful</h2>
-                <p>Whether you have a custom vision, a question about an order, or simply want to say hello — our artisans are here for you.</p>
+                <p>Whether you have a custom vision, a question about an order, or simply want to say hello — our
+                    artisans are here for you.</p>
                 <div class="contact-info-items">
                     <div class="contact-info-item">
                         <div class="contact-info-icon"><i class="ph ph-map-pin"></i></div>
@@ -1163,7 +1853,7 @@
     <footer class="footer-master">
         <div class="footer-content">
             <div class="footer-brand">
-                <img src="assets/logo.png" alt="Yarny" class="f-logo">
+                <img src="assets/Yarnynewlogo.png" alt="Yarny" class="f-logo">
                 <p>Handmade Luxury from<br>Tanger, Morocco.</p>
             </div>
             <div class="footer-col">
@@ -1212,7 +1902,9 @@
             </div>
             <div class="shipping-tracker">
                 <p id="shippingText">Add <strong>500 MAD</strong> for Free Shipping</p>
-                <div class="progress-track"><div class="progress-fill" id="shippingBar"></div></div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="shippingBar"></div>
+                </div>
             </div>
         </div>
         <!-- SCROLLABLE ITEMS -->
@@ -1229,11 +1921,14 @@
         <div class="drawer-fixed-footer">
             <div class="cart-footer-receipt">
                 <div class="receipt-row"><span>Subtotal</span><span id="cartSubtotal">0.00 MAD</span></div>
-                <div class="receipt-row"><span>Shipping</span><span id="cartShipping">Calculated at checkout</span></div>
-                <div class="receipt-row receipt-vat"><span>VAT <small>(20%)</small></span><span id="cartVAT">0.00 MAD</span></div>
+                <div class="receipt-row"><span>Shipping</span><span id="cartShipping">Calculated at checkout</span>
+                </div>
+                <div class="receipt-row receipt-vat"><span>VAT <small>(20%)</small></span><span id="cartVAT">0.00
+                        MAD</span></div>
                 <div class="receipt-divider"></div>
                 <div class="receipt-total-row"><span>Total</span><span id="cartFinalTotal">0.00 MAD</span></div>
-                <button class="btn-prestige full-width" id="checkoutBtn"><span>Secure Checkout</span> <i class="ph ph-lock-key"></i></button>
+                <button class="btn-prestige full-width" id="checkoutBtn"><span>Secure Checkout</span> <i
+                        class="ph ph-lock-key"></i></button>
             </div>
         </div>
     </div>
@@ -1298,7 +1993,8 @@
                         <i class="ph ph-heart"></i>
                     </button>
                 </div>
-                <p class="qv-trust"><i class="ph ph-shield-check"></i> Authentic handmade · Free returns within 14 days</p>
+                <p class="qv-trust"><i class="ph ph-shield-check"></i> Authentic handmade · Free returns within 14 days
+                </p>
             </div>
         </div>
     </div>
@@ -1310,13 +2006,17 @@
 
         <!-- Step indicators -->
         <div class="checkout-steps" id="checkoutSteps">
-            <div class="ckstep active" data-step="1"><span class="ckstep-num">1</span><span class="ckstep-label">Bag</span></div>
+            <div class="ckstep active" data-step="1"><span class="ckstep-num">1</span><span
+                    class="ckstep-label">Bag</span></div>
             <div class="ckstep-line"></div>
-            <div class="ckstep" data-step="2"><span class="ckstep-num">2</span><span class="ckstep-label">Billing</span></div>
+            <div class="ckstep" data-step="2"><span class="ckstep-num">2</span><span class="ckstep-label">Billing</span>
+            </div>
             <div class="ckstep-line"></div>
-            <div class="ckstep" data-step="3"><span class="ckstep-num">3</span><span class="ckstep-label">Payment</span></div>
+            <div class="ckstep" data-step="3"><span class="ckstep-num">3</span><span class="ckstep-label">Payment</span>
+            </div>
             <div class="ckstep-line"></div>
-            <div class="ckstep" data-step="4"><span class="ckstep-num">4</span><span class="ckstep-label">Confirm</span></div>
+            <div class="ckstep" data-step="4"><span class="ckstep-num">4</span><span class="ckstep-label">Confirm</span>
+            </div>
         </div>
 
         <!-- Step 1: Cart Review -->
@@ -1330,7 +2030,8 @@
                 <div class="receipt-divider"></div>
                 <div class="receipt-total-row"><span>Total</span><span id="ckTotal">0 MAD</span></div>
             </div>
-            <button class="btn-prestige full-width ck-next" data-next="2"><span>Continue to Billing</span><i class="ph ph-arrow-right"></i></button>
+            <button class="btn-prestige full-width ck-next" data-next="2"><span>Continue to Billing</span><i
+                    class="ph ph-arrow-right"></i></button>
         </div>
 
         <!-- Step 2: Billing -->
@@ -1338,14 +2039,19 @@
             <h3 class="ck-step-title">Billing Details</h3>
             <form class="ck-form" id="ckBillingForm" novalidate>
                 <div class="ck-form-row">
-                    <div class="ck-field"><label>Full Name</label><input type="text" id="ckName" placeholder="Amal Benali" required><span class="ck-error"></span></div>
-                    <div class="ck-field"><label>Email</label><input type="email" id="ckEmail" placeholder="you@example.com" required><span class="ck-error"></span></div>
+                    <div class="ck-field"><label>Full Name</label><input type="text" id="ckName"
+                            placeholder="Amal Benali" required><span class="ck-error"></span></div>
+                    <div class="ck-field"><label>Email</label><input type="email" id="ckEmail"
+                            placeholder="you@example.com" required><span class="ck-error"></span></div>
                 </div>
                 <div class="ck-form-row">
-                    <div class="ck-field"><label>Phone</label><input type="tel" id="ckPhone" placeholder="+212 6xx xxx xxx" required><span class="ck-error"></span></div>
-                    <div class="ck-field"><label>City</label><input type="text" id="ckCity" placeholder="Tanger" required><span class="ck-error"></span></div>
+                    <div class="ck-field"><label>Phone</label><input type="tel" id="ckPhone"
+                            placeholder="+212 6xx xxx xxx" required><span class="ck-error"></span></div>
+                    <div class="ck-field"><label>City</label><input type="text" id="ckCity" placeholder="Tanger"
+                            required><span class="ck-error"></span></div>
                 </div>
-                <div class="ck-field full"><label>Address</label><input type="text" id="ckAddress" placeholder="123 Rue de la Medina" required><span class="ck-error"></span></div>
+                <div class="ck-field full"><label>Address</label><input type="text" id="ckAddress"
+                        placeholder="123 Rue de la Medina" required><span class="ck-error"></span></div>
                 <div class="ck-field full"><label>Country</label>
                     <select id="ckCountry" required>
                         <option value="">Select country</option>
@@ -1360,7 +2066,8 @@
             </form>
             <div class="ck-nav-row">
                 <button class="ck-back" data-back="1"><i class="ph ph-arrow-left"></i> Back</button>
-                <button class="btn-prestige ck-next" data-next="3" id="ckBillingNext"><span>Continue to Payment</span><i class="ph ph-arrow-right"></i></button>
+                <button class="btn-prestige ck-next" data-next="3" id="ckBillingNext"><span>Continue to Payment</span><i
+                        class="ph ph-arrow-right"></i></button>
             </div>
         </div>
 
@@ -1386,11 +2093,14 @@
             <div class="ck-card-fields" id="ckCardFields">
                 <div class="ck-field full">
                     <label>Card Number</label>
-                    <input type="text" id="ckCardNum" placeholder="1234 5678 9012 3456" maxlength="19"><span class="ck-error"></span>
+                    <input type="text" id="ckCardNum" placeholder="1234 5678 9012 3456" maxlength="19"><span
+                        class="ck-error"></span>
                 </div>
                 <div class="ck-form-row">
-                    <div class="ck-field"><label>Expiry</label><input type="text" id="ckExpiry" placeholder="MM / YY" maxlength="7"><span class="ck-error"></span></div>
-                    <div class="ck-field"><label>CVV</label><input type="password" id="ckCVV" placeholder="•••" maxlength="3"><span class="ck-error"></span></div>
+                    <div class="ck-field"><label>Expiry</label><input type="text" id="ckExpiry" placeholder="MM / YY"
+                            maxlength="7"><span class="ck-error"></span></div>
+                    <div class="ck-field"><label>CVV</label><input type="password" id="ckCVV" placeholder="•••"
+                            maxlength="3"><span class="ck-error"></span></div>
                 </div>
             </div>
 
@@ -1402,7 +2112,8 @@
 
             <div class="ck-nav-row">
                 <button class="ck-back" data-back="2"><i class="ph ph-arrow-left"></i> Back</button>
-                <button class="btn-prestige" id="ckPayNow"><span>Place Order</span><i class="ph ph-lock-key"></i></button>
+                <button class="btn-prestige" id="ckPayNow"><span>Place Order</span><i
+                        class="ph ph-lock-key"></i></button>
             </div>
         </div>
 
@@ -1411,18 +2122,21 @@
             <div class="ck-confirm-wrap">
                 <div class="ck-confirm-anim" id="ckConfirmAnim">
                     <svg class="ck-check-svg" viewBox="0 0 80 80">
-                        <circle class="ck-check-circle" cx="40" cy="40" r="35"/>
-                        <path class="ck-check-tick" d="M24 40 L35 51 L56 29"/>
+                        <circle class="ck-check-circle" cx="40" cy="40" r="35" />
+                        <path class="ck-check-tick" d="M24 40 L35 51 L56 29" />
                     </svg>
                 </div>
                 <h2 class="ck-confirm-title">Order Confirmed</h2>
-                <p class="ck-confirm-sub">Thank you for your order. Our artisans will begin crafting your piece with love.</p>
+                <p class="ck-confirm-sub">Thank you for your order. Our artisans will begin crafting your piece with
+                    love.</p>
                 <div class="ck-confirm-num">Order #<span id="ckOrderNum">YRN-0000</span></div>
                 <div class="ck-confirm-detail">
                     <div><i class="ph ph-clock"></i> Estimated 5-10 working days</div>
-                    <div><i class="ph ph-envelope"></i> Confirmation sent to <span id="ckConfirmEmail">your email</span></div>
+                    <div><i class="ph ph-envelope"></i> Confirmation sent to <span id="ckConfirmEmail">your email</span>
+                    </div>
                 </div>
-                <button class="btn-prestige" id="ckDoneBtn"><span>Continue Shopping</span><i class="ph ph-sparkle"></i></button>
+                <button class="btn-prestige" id="ckDoneBtn"><span>Continue Shopping</span><i
+                        class="ph ph-sparkle"></i></button>
             </div>
         </div>
 
@@ -1437,12 +2151,106 @@
     <!-- TOAST -->
     <div id="welcomeToast" class="toast">
         <div class="toast-icon"><i class="ph ph-check"></i></div>
-        <div class="toast-text"><h4>Success</h4><p id="welcomeMsg">Welcome.</p></div>
+        <div class="toast-text">
+            <h4>Success</h4>
+            <p id="welcomeMsg">Welcome.</p>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+
+    <!-- === LUXURY YARN VIDEO PARALLAX START === -->
+    <script>
+    (function () {
+        var section = document.getElementById('lpvSection');
+        var wrapper = document.getElementById('lpvWrapper');
+        var video   = document.getElementById('lpvVideo');
+        if (!section || !wrapper || !video) return;
+
+        var isMobile = function () { return window.innerWidth <= 768; };
+
+        /* ── IntersectionObserver: autoplay at 20% visibility ── */
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    section.classList.add('lpv-visible');
+                    video.play().catch(function () {});
+                } else {
+                    section.classList.remove('lpv-visible');
+                    video.pause();
+                }
+            });
+        }, { threshold: [0, 0.2, 1] });
+
+        observer.observe(section);
+
+        /* ── Parallax: 0.35x scroll speed, desktop only ── */
+        function applyParallax() {
+            if (isMobile()) {
+                wrapper.style.transform = '';
+                return;
+            }
+            var rect          = section.getBoundingClientRect();
+            var viewH         = window.innerHeight;
+            var sectionCenter = rect.top + rect.height * 0.5;
+            var viewCenter    = viewH * 0.5;
+            var shift         = (sectionCenter - viewCenter) * 0.35;
+            wrapper.style.transform = 'translateY(' + shift + 'px)';
+        }
+
+        window.addEventListener('scroll', applyParallax, { passive: true });
+        window.addEventListener('resize', applyParallax, { passive: true });
+        applyParallax();
+    })();
+    </script>
+    <!-- === LUXURY YARN VIDEO PARALLAX END === -->
+
+    <!-- === KNITTING VIDEO SECTION START === -->
+    <script>
+    // === KNITTING VIDEO SECTION START ===
+    (function () {
+        var section = document.getElementById('kvSection');
+        var wrapper = document.getElementById('kvWrapper');
+        var video   = document.getElementById('kvVideo');
+        if (!section || !wrapper || !video) return;
+
+        var isMobile = function () { return window.innerWidth <= 768; };
+
+        /* Fade-in on scroll into view */
+        var fadeObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    section.classList.add('kv-visible');
+                    video.play().catch(function () {});
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeObserver.observe(section);
+
+        /* Parallax: 0.4x scroll speed, desktop only */
+        function applyParallax() {
+            if (isMobile()) {
+                wrapper.style.transform = '';
+                return;
+            }
+            var rect          = section.getBoundingClientRect();
+            var viewH         = window.innerHeight;
+            var sectionCenter = rect.top + rect.height * 0.5;
+            var viewCenter    = viewH * 0.5;
+            var shift         = (sectionCenter - viewCenter) * 0.4;
+            wrapper.style.transform = 'translateY(' + shift + 'px)';
+        }
+
+        window.addEventListener('scroll', applyParallax, { passive: true });
+        window.addEventListener('resize', applyParallax, { passive: true });
+        applyParallax();
+    })();
+    // === KNITTING VIDEO SECTION END ===
+    </script>
+    <!-- === KNITTING VIDEO SECTION END === -->
 </body>
+
 </html>
