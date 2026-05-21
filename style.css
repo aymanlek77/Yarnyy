@@ -11874,3 +11874,333 @@ section {
   }
 
 } /* end @media (max-width: 768px) mobile fixes */
+
+/* ══════════════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE — COMPREHENSIVE FIXES
+   All breakpoints below target issues not covered by existing queries.
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* ── Global: prevent horizontal overflow on all screens ── */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+/* ══ 900px — tablet breakpoint ══ */
+@media (max-width: 900px) {
+  /* Navbar padding */
+  .navbar {
+    padding: 0 20px !important;
+  }
+
+  /* Logo size */
+  .nav-logo-img {
+    height: 52px !important;
+  }
+
+  /* Hero: reduce subtitle letter-spacing so it doesn't overflow */
+  .hero-subtitle {
+    font-size: 0.75rem !important;
+    letter-spacing: 4px !important;
+  }
+
+  /* Hero title */
+  .hero-title-main {
+    font-size: clamp(3rem, 10vw, 6rem) !important;
+  }
+
+  /* Hero CTA button */
+  .btn-hero-lumiere {
+    font-size: 0.65rem !important;
+    letter-spacing: 3px !important;
+    gap: 12px !important;
+  }
+
+  /* Section heads */
+  .section-head h2 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Moroccan stats bar wraps nicely */
+  .moroccan-stats-bar {
+    flex-wrap: wrap !important;
+    gap: 10px 20px !important;
+    justify-content: center !important;
+  }
+
+  /* Coll grid cards: keep reasonable height when 1-col */
+  .coll-grid .showcase-card {
+    height: 360px !important;
+  }
+}
+
+/* ══ 768px — mobile breakpoint ══ */
+@media (max-width: 768px) {
+
+  /* ── DEV SIGNATURE SECTION — full mobile reflow ── */
+  #dev-signature {
+    height: auto !important;
+    min-height: 100svh !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .dev-content {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    padding: 56px 28px 36px !important;
+    height: auto !important;
+    gap: 0 !important;
+    position: relative !important;
+  }
+
+  .dev-name-block {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    margin-bottom: 24px !important;
+  }
+
+  .dev-name {
+    font-size: clamp(3rem, 14vw, 5rem) !important;
+  }
+
+  .dev-tagline-block {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    text-align: left !important;
+    padding-top: 0 !important;
+    margin-bottom: 24px !important;
+  }
+
+  .dev-tagline-line1,
+  .dev-tagline-line2 {
+    font-size: 1.1rem !important;
+  }
+
+  .dev-bio {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    margin-bottom: 20px !important;
+    max-width: 100% !important;
+  }
+
+  .dev-stack {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    margin-bottom: 20px !important;
+  }
+
+  .dev-socials {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    margin-bottom: 20px !important;
+  }
+
+  .dev-role-block {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    text-align: left !important;
+    padding-bottom: 28px !important;
+  }
+
+  .dev-role {
+    font-size: clamp(1rem, 5vw, 1.4rem) !important;
+  }
+
+  /* Photo becomes a bottom block instead of absolute overlay */
+  .dev-photo-container {
+    position: relative !important;
+    width: 100% !important;
+    height: 260px !important;
+    bottom: auto !important;
+    right: auto !important;
+    margin-top: auto !important;
+  }
+
+  .dev-photo {
+    object-position: center top !important;
+    mask-image: linear-gradient(to bottom, black 40%, transparent 100%) !important;
+    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%) !important;
+  }
+
+  /* Giant word: smaller on mobile */
+  .dev-giant-word {
+    font-size: clamp(3.5rem, 22vw, 6rem) !important;
+    bottom: 20px !important;
+    -webkit-text-stroke: 1px rgba(184,150,90,0.20) !important;
+  }
+
+  /* ── Hero subtitle letter-spacing ── */
+  .hero-subtitle {
+    font-size: 0.65rem !important;
+    letter-spacing: 3px !important;
+  }
+
+  /* ── Hero title ── */
+  .hero-title-main {
+    font-size: clamp(2.8rem, 12vw, 5rem) !important;
+    letter-spacing: -1px !important;
+  }
+
+  /* ── Footer padding ── */
+  .footer-content {
+    padding: 0 24px 40px !important;
+    gap: 32px !important;
+  }
+
+  .footer-bottom {
+    padding: 18px 24px !important;
+    font-size: 0.65rem !important;
+  }
+
+  /* ── Showcase marquee bar text ── */
+  .showcase-marquee-track span {
+    font-size: 0.55rem !important;
+    letter-spacing: 3px !important;
+  }
+
+  /* ── Section padding ── */
+  .section {
+    padding: 60px 0 !important;
+  }
+
+  /* ── Contact section ── */
+  .contact-left,
+  .contact-right {
+    padding: 40px 20px !important;
+  }
+
+  .contact-left h2 {
+    font-size: 2.4rem !important;
+  }
+
+  /* ── QV modal width ── */
+  .qv-modal {
+    width: 95vw !important;
+    max-height: 90vh !important;
+  }
+
+  /* ── Auth box height on small phones ── */
+  .auth-box-center {
+    max-height: 95vh !important;
+    overflow-y: auto !important;
+  }
+
+  /* ── VIP special order: reduce padding ── */
+  .vip-text-area,
+  .vip-form-container {
+    padding: 40px 20px !important;
+  }
+
+  /* ── Morocco banner on mobile ── */
+  .moroccoyarny-title .myt-line--morocco {
+    font-size: clamp(48px, 16vw, 80px) !important;
+  }
+
+  /* ── Checkout drawer full width ── */
+  .checkout-drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* ══ 480px — small phone breakpoint ══ */
+@media (max-width: 480px) {
+  /* Navbar padding tighter */
+  .navbar {
+    padding: 0 14px !important;
+  }
+
+  .nav-logo-img {
+    height: 45px !important;
+  }
+
+  /* Nav action icons smaller */
+  .icon-btn {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.2rem !important;
+  }
+
+  /* Hero */
+  .hero-title-main {
+    font-size: clamp(2.4rem, 13vw, 3.5rem) !important;
+  }
+
+  .hero-content-container {
+    padding-top: 100px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    gap: 20px !important;
+  }
+
+  /* CTA button */
+  .btn-hero-lumiere {
+    font-size: 0.6rem !important;
+    letter-spacing: 2px !important;
+  }
+
+  /* Collections grid: tighter */
+  .showcase-card {
+    height: 190px !important;
+  }
+
+  /* Section head */
+  .section-head h2 {
+    font-size: 1.5rem !important;
+  }
+
+  /* Footer */
+  .footer-content {
+    padding: 0 16px 32px !important;
+    gap: 24px !important;
+  }
+
+  /* Morocco banner text center */
+  .moroccoyarny-content {
+    padding: 0 20px !important;
+  }
+
+  /* VIP form: 1 col */
+  .vip-form.vip-form-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Moroccan arch cards: 1 col on tiny screens */
+  .moroccan-products-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Cart / wishlist drawer */
+  .cart-drawer {
+    width: 100% !important;
+  }
+
+  /* Checkout steps: compress */
+  .checkout-steps {
+    padding: 16px !important;
+    gap: 4px !important;
+  }
+
+  .ckstep-label {
+    font-size: 0.5rem !important;
+  }
+
+  /* Reviews: card min-width */
+  .review-card {
+    min-width: 240px !important;
+    padding: 16px !important;
+  }
+
+  /* Dev signature */
+  .dev-content {
+    padding: 48px 20px 28px !important;
+  }
+
+  .dev-name {
+    font-size: clamp(2.5rem, 15vw, 3.5rem) !important;
+  }
+}
