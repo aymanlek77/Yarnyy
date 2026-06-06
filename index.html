@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:ital,wght@0,700;1,700&family=Bebas+Neue&family=Barlow+Condensed:wght@700;800;900&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="style.css">
@@ -155,35 +155,14 @@
         </div>
         <div class="hero-content-container">
             <div class="hero-text-block">
-                <span class="hero-subtitle">Wrap yourself in a</span>
-                <h1 class="hero-title-main">Yarny Warmth</h1>
-            </div>
-            <div class="hero-stats-row">
-                <div class="hero-stat">
-                    <span class="hero-stat-num" data-count="120" data-suffix="+">0+</span>
-                    <span class="hero-stat-label">Unique Designs</span>
-                </div>
-                <span class="hero-stat-divider"></span>
-                <div class="hero-stat">
-                    <span class="hero-stat-num" data-count="500" data-suffix="+">0+</span>
-                    <span class="hero-stat-label">Happy Clients</span>
-                </div>
-                <span class="hero-stat-divider"></span>
-                <div class="hero-stat">
-                    <span class="hero-stat-num" data-count="3">0</span>
-                    <span class="hero-stat-label">Collections</span>
-                </div>
+                <p class="hero-eyebrow">—— WRAP YOURSELF IN A ——</p>
+                <h1 class="hero-title">YARNY</h1>
+                <p class="hero-warmth">Warmth</p>
             </div>
             <a href="#showcase" class="btn-hero-lumiere smooth-link">
                 <div class="btn-lumiere-inner">Discover Collection</div>
                 <div class="btn-lumiere-arrow"><i class="ph ph-arrow-right"></i></div>
             </a>
-        </div>
-        <div class="scroll-icon">
-            <div class="mouse-shape">
-                <div class="wheel-anim"></div>
-            </div>
-            <span class="scroll-label">Scroll</span>
         </div>
     </header>
 
@@ -215,7 +194,7 @@
     <section id="showcase" class="showcase-compact">
 
         <!-- ── EDITORIAL HEADER ─────────────────────── -->
-        <div class="coll-header">
+        <div class="coll-header" style="display:none">
 
             <!-- TOP marquee bar -->
             <div class="showcase-marquee-bar">
@@ -292,7 +271,7 @@
             </div>
 
         </div>
-        <div class="showcase-fade"></div>
+        <div class="showcase-fade" style="display:none"></div>
 
         <!-- ── 2×2 FULL-BLEED CARD GRID ──────────────── -->
         <div class="coll-grid">
@@ -323,7 +302,22 @@
                 </div>
             </a>
 
-            <!-- Card 3 — Handbags (bottom-left, narrow) -->
+            <!-- Card 3 — Moroccan Touch (full-width, row 2) -->
+            <a href="#moroccan-touch" class="showcase-card smooth-link">
+                <img src="assets/col-moroccan.png" alt="Moroccan Touch Collection"
+                     style="object-fit:cover;object-position:center center;width:100%;height:100%"
+                     onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#2C2A27,#1A1815)'">
+                <span class="showcase-card-badge">4 CITIES</span>
+                <div class="showcase-card-content">
+                    <span class="showcase-card-eyebrow">MOROCCAN HERITAGE</span>
+                    <h3 class="showcase-card-title">Moroccan Touch</h3>
+                    <span class="showcase-card-discover">
+                        DISCOVER <span class="discover-line"></span>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Card 4 — Handbags (bottom-left) -->
             <a href="#bags" class="showcase-card smooth-link">
                 <img src="assets/col-bags.png" alt="Handbags Collection">
                 <span class="showcase-card-badge">4 Pieces</span>
@@ -336,7 +330,7 @@
                 </div>
             </a>
 
-            <!-- Card 4 — Baby (bottom-right, wide) -->
+            <!-- Card 5 — Baby (bottom-right) -->
             <a href="#baby" class="showcase-card smooth-link">
                 <img src="assets/col-baby.png" alt="Baby Collection">
                 <span class="showcase-card-badge">4 Pieces</span>
@@ -1362,130 +1356,6 @@
         </div>
     </section>
 
-    <!-- TEAM -->
-    <section id="team">
-
-      <div class="team-header">
-
-        <div class="showcase-marquee-bar">
-          <div class="showcase-marquee-track">
-            <span>OUMNIA</span>
-            <span class="smq-dot">◆</span>
-            <span>SALMA</span>
-            <span class="smq-dot">◆</span>
-            <span>HAJAR</span>
-            <span class="smq-dot">◆</span>
-            <span>NOUHAILA</span>
-            <span class="smq-dot">◆</span>
-            <span>CIEL STAGIAIRE</span>
-            <span class="smq-dot">◆</span>
-            <span>YARNY ATELIER</span>
-            <span class="smq-dot">◆</span>
-            <span>TANGER · MAROC</span>
-            <span class="smq-dot">◆</span>
-            <span>OUMNIA</span>
-            <span class="smq-dot">◆</span>
-            <span>SALMA</span>
-            <span class="smq-dot">◆</span>
-            <span>HAJAR</span>
-            <span class="smq-dot">◆</span>
-            <span>NOUHAILA</span>
-            <span class="smq-dot">◆</span>
-            <span>CIEL STAGIAIRE</span>
-            <span class="smq-dot">◆</span>
-            <span>YARNY ATELIER</span>
-            <span class="smq-dot">◆</span>
-            <span>TANGER · MAROC</span>
-            <span class="smq-dot">◆</span>
-          </div>
-        </div>
-
-        <div class="showcase-header-center">
-          <span class="showcase-eyebrow">✦ THE HEART OF YARNY ✦</span>
-          <h2 class="showcase-main-title team-main-title">
-            <span class="title-word-our">The</span>
-            <span class="title-word-collections"> Members</span>
-          </h2>
-          <p class="showcase-subtitle">The artisan hands behind every stitch</p>
-          <div class="showcase-deco">
-            <span class="showcase-deco-line showcase-deco-line-left"></span>
-            <span class="showcase-deco-diamond">◆</span>
-            <span class="showcase-deco-line showcase-deco-line-right"></span>
-          </div>
-        </div>
-
-        <div class="showcase-marquee-bar showcase-marquee-bar--reverse">
-          <div class="showcase-marquee-track showcase-marquee-track--reverse">
-            <span>HANDCRAFTED</span>
-            <span class="smq-dot">◆</span>
-            <span>PURE PASSION</span>
-            <span class="smq-dot">◆</span>
-            <span>ARTISAN MADE</span>
-            <span class="smq-dot">◆</span>
-            <span>MOROCCAN HERITAGE</span>
-            <span class="smq-dot">◆</span>
-            <span>PURE WOOL</span>
-            <span class="smq-dot">◆</span>
-            <span>ATELIER YARNY</span>
-            <span class="smq-dot">◆</span>
-            <span>HANDCRAFTED</span>
-            <span class="smq-dot">◆</span>
-            <span>PURE PASSION</span>
-            <span class="smq-dot">◆</span>
-            <span>ARTISAN MADE</span>
-            <span class="smq-dot">◆</span>
-            <span>MOROCCAN HERITAGE</span>
-            <span class="smq-dot">◆</span>
-            <span>PURE WOOL</span>
-            <span class="smq-dot">◆</span>
-            <span>ATELIER YARNY</span>
-            <span class="smq-dot">◆</span>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="team-grid">
-
-        <div class="team-card" data-index="0">
-          <div class="team-card-image">
-            <span class="team-bg-name">Oumnia</span>
-            <img src="assets/OUMNIAAA.png" alt="Oumnia">
-            <div class="team-card-overlay"></div>
-            <h3 class="team-card-name">Oumnia</h3>
-          </div>
-        </div>
-
-        <div class="team-card" data-index="1">
-          <div class="team-card-image">
-            <span class="team-bg-name">Salma</span>
-            <img src="assets/Salmaaa.png" alt="Salma">
-            <div class="team-card-overlay"></div>
-            <h3 class="team-card-name">Salma</h3>
-          </div>
-        </div>
-
-        <div class="team-card" data-index="2">
-          <div class="team-card-image">
-            <span class="team-bg-name">Hajar</span>
-            <img src="assets/HAJARR.png" alt="Hajar">
-            <div class="team-card-overlay"></div>
-            <h3 class="team-card-name">Hajar</h3>
-          </div>
-        </div>
-
-        <div class="team-card" data-index="3">
-          <div class="team-card-image">
-            <span class="team-bg-name">Nouhaila</span>
-            <img src="assets/NOUHAILAA.png" alt="Nouhaila">
-            <div class="team-card-overlay"></div>
-            <h3 class="team-card-name">Nouhaila</h3>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
 
     <!-- Developer Signature -->
     <section id="dev-signature">
